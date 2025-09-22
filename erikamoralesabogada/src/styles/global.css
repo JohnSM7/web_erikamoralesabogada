@@ -1,0 +1,83 @@
+/* src/styles/global.css */
+
+/* 1. Reset y Variables de Estilo */
+:root {
+  --font-family-sans: 'Montserrat', sans-serif;
+  --font-family-serif: 'Playfair Display', serif;
+  --color-dark-blue: #0D2447;
+  --color-light-gray: #f8f9fa;
+  --color-white: #ffffff;
+  --color-accent: #D4AF37; /* Un dorado elegante como acento */
+  --color-text: #343a40;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  line-height: 1.6;
+}
+
+/* 2. Estilos Generales y de Contenedor */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-family-serif);
+  color: var(--color-dark-blue);
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2rem; }
+p { margin-bottom: 1rem; }
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* 3. Botones y Elementos de UI */
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-white) !important;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: grey;
+  transform: translateY(-2px);
+}
+
+/* 4. Estilos de Secciones */
+.section {
+  padding: 4rem 0;
+}
+
+.section-light {
+  background-color: var(--color-light-gray);
+}

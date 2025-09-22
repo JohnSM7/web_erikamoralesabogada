@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/ja.json';
+---
+<Layout title="エリカ・モラレス | 弁護士" lang="ja">
+    <div class="hero">
+        <div class="container">
+            <h1>{t.homepage.heroTitle}</h1>
+            <p>{t.homepage.heroSubtitle}</p>
+            <a href={`/ja/${t.slugs.contact}`} class="cta-button">{t.homepage.heroCta}</a>
+        </div>
+    </div>
+    
+    <section class="section section-light">
+        <div class="container">
+            <h2>ようこそ</h2>
+            <p>
+                個人的で専門的な法的サービスを提供します。私の目標は、各事件に最適な戦略と防御を提供し、常にお客様にとって最も有利な解決策を模索することです。私の専門分野について詳しくは、サイトをご覧ください。
+            </p>
+        </div>
+    </section>
+
+</Layout>
+
+<style>
+    /* Estilos idénticos a los otros index.astro */
+    .hero {
+        background-color: var(--color-dark-blue);
+        color: var(--color-white);
+        padding: 6rem 0;
+        text-align: center;
+    }
+    .hero h1 {
+        color: var(--color-white);
+        margin-bottom: 1.5rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 2rem auto;
+    }
+</style>

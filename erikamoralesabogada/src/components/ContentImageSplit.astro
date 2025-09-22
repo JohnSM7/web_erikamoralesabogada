@@ -1,0 +1,51 @@
+---
+interface Props {
+    title: string;
+    imageSrc: string;
+    imageAlt: string;
+    reverse?: boolean; // Esta prop controla el orden
+}
+
+const { title, imageSrc, imageAlt, reverse = false } = Astro.props;
+---
+<section class="split-section section">
+    <div class="container">
+        <div class:list={["split-container", { reverse: reverse }]}>
+            <div class="split-image">
+                <img src={imageSrc} alt={imageAlt} loading="lazy">
+            </div>
+            <div class="split-content">
+                <h2>{title}</h2>
+                <slot /> </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .split-container {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+    .split-image, .split-content {
+        flex: 1; /* Ambas columnas ocupan el 50% */
+    }
+    .split-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    /* Esta regla invierte el orden cuando se usa la prop 'reverse' */
+    .split-container.reverse {
+        flex-direction: row-reverse;
+    }
+
+    /* --- ESTA ES LA CORRECCIÓN PARA MÓVILES --- */
+    @media (max-width: 768px) {
+        .split-container, .split-container.reverse {
+            flex-direction: column; /* Cambia la dirección a vertical */
+            gap: 2rem; /* Reduce el espacio en móvil */
+        }
+    }
+</style>

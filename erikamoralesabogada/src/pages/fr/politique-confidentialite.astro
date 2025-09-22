@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/fr.json';
+---
+<Layout title={t.legal.privacy} lang="fr">
+    <div class="container section">
+        <h1>{t.legal.privacy}</h1>
+        <div class="legal-content">
+            <p><strong>Dernière mise à jour : 22 septembre 2025</strong></p>
+            <p>
+                Bienvenue dans la Politique de confidentialité d'Erika Morales, Avocate. Votre vie privée est importante pour nous...
+            </p>
+        </div>
+    </div>
+</Layout>
+<style>
+    .legal-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
+    .legal-content p { margin-bottom: 1rem; }
+</style>

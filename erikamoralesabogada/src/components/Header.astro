@@ -1,0 +1,109 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import SocialLinks from './SocialLinks.astro';
+import es from '../i18n/es.json';
+import en from '../i18n/en.json';
+import fr from '../i18n/fr.json';
+import ja from '../i18n/ja.json';
+
+interface Props {
+	currentLang: 'es' | 'en' | 'fr' | 'ja';
+}
+const { currentLang } = Astro.props;
+const translations = { es, en, fr, ja };
+const t = translations[currentLang];
+
+const navLinks = [
+    { href: `/${currentLang}/`, text: t.nav.home },
+    { href: `/${currentLang}/${t.slugs.about}`, text: t.nav.about },
+    { href: `/${currentLang}/${t.slugs.services}`, text: t.nav.services },
+    { href: `/${currentLang}/${t.slugs.contact}`, text: t.nav.contact },
+];
+---
+<header>
+    <div class="container header-container">
+        <a href={`/${currentLang}/`} class="logo">
+            <img src="/logo_erika.png" alt="Logo de Erika Morales Abogada">
+        </a>
+        
+        <nav class="desktop-nav">
+            <ul>
+                {navLinks.map(link => ( <li><a href={link.href}>{link.text}</a></li> ))}
+            </ul>
+        </nav>
+
+        <div class="desktop-header-right">
+            <SocialLinks />
+            <LanguageSwitcher currentLang={currentLang} />
+        </div>
+
+        <button class="hamburger-button" aria-label="Abrir menú" aria-expanded="false">
+            <svg class="icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="24" height="24"><path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+        </button>
+    </div>
+
+    <div class="mobile-nav">
+        <nav>
+            <ul>
+                {navLinks.map(link => ( <li><a href={link.href}>{link.text}</a></li> ))}
+            </ul>
+        </nav>
+        <div class="mobile-nav-controls">
+            <SocialLinks />
+            <LanguageSwitcher currentLang={currentLang} menuDirection="up" />
+        </div>
+    </div>
+</header>
+
+<style>
+    header { background-color: var(--color-white); padding: 1rem 0; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+    .header-container { display: flex; justify-content: space-between; align-items: center; }
+    .logo img { height: 100px; width: auto; display: block; }
+    .desktop-nav { flex-grow: 1; display: flex; justify-content: center; }
+    .desktop-nav ul { list-style: none; display: flex; gap: 2rem; }
+    .desktop-nav a { color: var(--color-dark-blue); font-weight: bold; padding-bottom: 5px; border-bottom: 2px solid transparent; transition: border-color 0.3s ease; }
+    .desktop-nav a:hover { border-color: var(--color-accent); }
+    .desktop-header-right { display: flex; align-items: center; gap: 1.5rem; }
+    
+    .hamburger-button { display: none; background: none; border: none; cursor: pointer; z-index: 1002; padding: 0.5rem; }
+    .hamburger-button .icon-close { display: none; }
+
+    .mobile-nav { 
+        position: fixed; top: 0; right: 0; width: 80%; max-width: 320px; height: 100%; /* Usamos 100% en lugar de 100vh para mejor compatibilidad móvil */
+        background-color: var(--color-dark-blue); 
+        transform: translateX(100%); 
+        transition: transform 0.3s ease-in-out; 
+        z-index: 1001; 
+        overflow-y: auto; 
+        display: flex; 
+        flex-direction: column;
+        padding: 6rem 2rem 2rem;
+    }
+    .mobile-nav nav {
+        flex-grow: 1; /* Esto empuja los controles hacia abajo */
+    }
+    .mobile-nav ul { list-style: none; }
+    .mobile-nav li { margin-bottom: 1.5rem; }
+    .mobile-nav a { color: var(--color-white); font-size: 1.5rem; font-weight: bold; }
+    .mobile-nav-controls { border-top: 1px solid #556681; padding-top: 2rem; margin-top: 2rem; display: flex; flex-direction: column; gap: 2rem; }
+    
+    header.mobile-menu-open .mobile-nav { transform: translateX(0); }
+    header.mobile-menu-open .hamburger-button .icon-open { display: none; }
+    header.mobile-menu-open .hamburger-button .icon-close { display: block; color: white; }
+
+    @media (max-width: 960px) {
+        .desktop-nav, .desktop-header-right { display: none; }
+        .hamburger-button { display: block; }
+    }
+</style>
+
+<script>
+    const header = document.querySelector('header');
+    const hamburgerButton = document.querySelector('.hamburger-button');
+    if (header && hamburgerButton) {
+        hamburgerButton.addEventListener('click', () => {
+            header.classList.toggle('mobile-menu-open');
+        });
+    }
+</script>

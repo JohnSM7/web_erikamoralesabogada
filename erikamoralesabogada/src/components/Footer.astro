@@ -1,0 +1,92 @@
+---
+// --- 1. LÓGICA DEL COMPONENTE ---
+import es from '../i18n/es.json';
+import en from '../i18n/en.json';
+import fr from '../i18n/fr.json';
+import ja from '../i18n/ja.json';
+
+const translations = { es, en, fr, ja };
+
+
+interface Props {
+	currentLang: 'es' | 'en' | 'fr' | 'ja';
+}
+const { currentLang } = Astro.props;
+
+// Ahora 't' puede usar 'translations' sin problema.
+const t = translations[currentLang];
+// Obtenemos el año actual para el copyright
+const year = new Date().getFullYear();
+---
+
+<footer>
+    <div class="container footer-container">
+        
+        <a href={`/${currentLang}/`} class="footer-logo">
+            <img src="/logo_erika.png" alt="Logo de Erika Morales Abogada">
+        </a>
+
+        <div class="legal-links">
+            <a href={`/${currentLang}/${t.legal.cookies_slug}`}>{t.legal.cookies}</a>
+            <a href={`/${currentLang}/${t.legal.legal_notice_slug}`}>{t.legal.legal_notice}</a>
+            <a href={`/${currentLang}/${t.legal.accessibility_slug}`}>{t.legal.accessibility}</a>
+            <a href={`/${currentLang}/${t.legal.privacy_slug}`}>{t.legal.privacy}</a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; {year} Erika Morales. {t.footer.rights}</p>
+        </div>
+
+    </div>
+</footer>
+
+<style>
+    footer {
+        background-color: var(--color-dark-blue);
+        color: var(--color-light-gray);
+        font-size: 0.875rem;
+    }
+    
+    .footer-container {
+        padding: 3rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra todos los elementos horizontalmente */
+        gap: 2rem; /* Espacio entre el logo, los enlaces y el copyright */
+    }
+
+    .footer-logo {
+        display: block;
+        max-width: 200px; /* Tamaño máximo del logo en el footer */
+    }
+
+    .footer-logo img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .legal-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 2rem; /* Espacio vertical y horizontal entre enlaces */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .legal-links a {
+        color: var(--color-light-gray);
+        text-decoration: underline;
+    }
+
+    .legal-links a:hover {
+        opacity: 0.8;
+    }
+
+    .copyright p {
+        margin: 0;
+        color: #aaa; /* Color más suave para el copyright */
+    }
+</style>

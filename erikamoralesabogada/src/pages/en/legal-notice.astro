@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/en.json';
+---
+<Layout title={t.legal.legal_notice} lang="en">
+    <div class="container section">
+        <h1>{t.legal.legal_notice}</h1>
+        <div class="legal-content">
+            <p>
+                In compliance with the duty of information contained in the applicable regulations, the following data is reflected below...
+            </p>
+        </div>
+    </div>
+</Layout>
+<style>
+    .legal-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
+    .legal-content p { margin-bottom: 1rem; }
+</style>

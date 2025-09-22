@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/fr.json';
+---
+<Layout title={t.legal.accessibility} lang="fr">
+    <div class="container section">
+        <h1>{t.legal.accessibility}</h1>
+        <div class="legal-content">
+            <p>
+                Erika Morales s'est engagée à rendre son site web accessible conformément aux normes d'accessibilité en vigueur...
+            </p>
+        </div>
+    </div>
+</Layout>
+<style>
+    .legal-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
+    .legal-content p { margin-bottom: 1rem; }
+</style>

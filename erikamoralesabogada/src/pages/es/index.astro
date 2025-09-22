@@ -1,0 +1,104 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import InfoDespacho from '../../components/InfoDespacho.astro';
+import ContentImageSplit from '../../components/ContentImageSplit.astro';
+import t from '../../i18n/es.json';
+---
+
+<Layout 
+    title="Abogada en Fuengirola y Costa del Sol | Erika Morales" 
+    description="Despacho de abogada especialista en extranjería, derecho civil, penal y laboral en Fuengirola (Málaga) y Madrid. Asesoramiento legal y soluciones reales." 
+    lang="es"
+>
+    
+    <div class="hero">
+        <div class="container">
+            <h1>{t.homepage.heroTitle}</h1>
+            <p>{t.homepage.heroSubtitle}</p>
+            <a href={`/es/${t.slugs.contact}`} class="cta-button">{t.homepage.heroCta}</a>
+        </div>
+    </div>
+
+    <section class="quote-section section">
+        <div class="container">
+            <h2>{t.introQuote.title}</h2>
+            <blockquote>
+                "{t.introQuote.quote}"
+                <cite>– {t.introQuote.author}</cite>
+            </blockquote>
+        </div>
+    </section>
+    <InfoDespacho lang="es" />
+
+    <ContentImageSplit 
+        title={t.aboutpage.philosophyTitle}
+        imageSrc="/erika1.png"
+        imageAlt="Erika Morales"
+    >
+        <p>{t.aboutpage.philosophyText}</p>
+    </ContentImageSplit>
+
+    <ContentImageSplit 
+        title={t.aboutpage.experienceTitle}
+        imageSrc="https://placehold.co/600x400/D4AF37/FFFFFF/png?text=Experiencia"
+        imageAlt="Imagen conceptual sobre experiencia y dedicación"
+        reverse={true}
+    >
+        <p>{t.aboutpage.experienceText}</p>
+    </ContentImageSplit>
+
+</Layout>
+
+<style>
+    .hero {
+        background-color: var(--color-dark-blue);
+        color: var(--color-white);
+        padding: 6rem 0;
+        text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/fondo.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .hero h1 {
+        color: var(--color-white);
+        margin-bottom: 1.5rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 2rem auto;
+        background-color: rgba(13, 36, 71, 0.5);
+        padding: 0.5rem;
+        border-radius: 5px;
+    }
+
+    /* Estilos para la nueva sección de la cita */
+    .quote-section {
+        text-align: center;
+        color: var(--color-text);
+    }
+    .quote-section h2 {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+    .quote-section blockquote {
+        max-width: 750px;
+        margin: 0 auto;
+        font-family: var(--font-family-serif);
+        font-style: italic;
+        font-size: 1.3rem;
+        line-height: 1.6;
+        border-left: 4px solid var(--color-accent);
+        padding-left: 2rem;
+        text-align: left;
+    }
+    .quote-section cite {
+        display: block;
+        margin-top: 1rem;
+        font-style: normal;
+        font-family: var(--font-family-sans);
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--color-dark-blue);
+    }
+</style>

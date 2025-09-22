@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/ja.json';
+---
+<Layout title={t.legal.cookies} lang="ja">
+    <div class="container section">
+        <h1>{t.legal.cookies}</h1>
+        <div class="legal-content">
+            <p>
+                このウェブサイトは、インターネット上のほとんどのサイトと同様に、ユーザーエクスペリエンスを向上させるためにクッキーを使用しています...
+            </p>
+        </div>
+    </div>
+</Layout>
+<style>
+    .legal-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
+    .legal-content p { margin-bottom: 1rem; }
+</style>

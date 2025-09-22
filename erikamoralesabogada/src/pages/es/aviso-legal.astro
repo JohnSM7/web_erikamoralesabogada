@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/es.json';
+---
+<Layout title={t.legal.legal_notice} 
+description="Consulta la Política de Privacidad del despacho de Erika Morales Abogada."
+lang="es">
+    <div class="container section">
+        <h1>{t.legal.legal_notice}</h1>
+        <div class="legal-content">
+            <p>
+                En cumplimiento con el deber de información recogido en la normativa aplicable, a continuación se reflejan los siguientes datos...
+            </p>
+        </div>
+    </div>
+</Layout>
+<style>
+    .legal-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
+    .legal-content p { margin-bottom: 1rem; }
+</style>

@@ -1,0 +1,74 @@
+{
+  "slugs": {
+    "about": "a-propos",
+    "services": "services",
+    "contact": "contact"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "homepage": {
+    "heroTitle": "Défense Juridique, Solutions Réelles.",
+    "heroSubtitle": "Engagement, expérience et dévouement pour protéger vos droits et intérêts.",
+    "heroCta": "Demander une Consultation"
+  },
+  "aboutpage": {
+    "title": "Engagement envers la Justice et l'Excellence",
+    "intro": "Je suis Erika Morales, une avocate dédiée à offrir des conseils juridiques personnalisés et de haute qualité. Mon objectif principal est de comprendre en profondeur les besoins de mes clients pour élaborer des stratégies juridiques solides et efficaces.",
+    "philosophyTitle": "Ma Philosophie",
+    "philosophyText": "Je crois en une pratique juridique basée sur la confiance, la transparence et une communication constante. Chaque cas est unique et mérite une attention méticuleuse. Je m'engage à vous guider à chaque étape du processus juridique, en expliquant clairement vos options afin que vous puissiez prendre des décisions éclairées.",
+    "experienceTitle": "Expérience et Dévouement",
+    "experienceText": "Avec une solide expérience dans divers domaines du droit, j'ai représenté des clients dans des négociations complexes et des litiges exigeants. Mon dévouement est d'assurer le meilleur résultat possible pour vous, votre famille ou votre entreprise.",
+    "cta": "Discutons de votre cas"
+  },
+  "servicespage": {
+    "title": "Domaines de Pratique",
+    "subtitle": "J'offre une représentation juridique experte dans une variété de disciplines pour les particuliers et les entreprises.",
+    "civilTitle": "Droit Civil",
+    "civilText": "Défense et représentation dans les affaires de contrats, recouvrement de créances, responsabilité civile, baux et droit immobilier.",
+    "familyTitle": "Droit de la Famille",
+    "familyText": "Conseils en matière de divorce, garde d'enfants, pensions alimentaires, successions et planification successorale.",
+    "penalTitle": "Droit Pénal",
+    "penalText": "Assistance et défense à toutes les étapes de la procédure pénale, de l'arrestation au procès, pour tous types d'infractions.",
+    "immigrationTitle": "Droit de l'Immigration",
+    "immigrationText": "Gestion des permis de séjour, demandes de nationalité, regroupement familial et recours contre les refus."
+  },
+  "contactpage": {
+    "title": "Contact",
+    "subtitle": "Je suis là pour aider. Envoyez votre demande via le formulaire ou utilisez les coordonnées directes. La première consultation est confidentielle.",
+    "formName": "Nom Complet",
+    "formEmail": "Adresse E-mail",
+    "formMessage": "Votre Message",
+    "formSend": "Envoyer la Demande",
+    "infoTitle": "Informations de Contact",
+    "infoAddress": "123 Rue Fictive, Bureau 4, 28080 Madrid, Espagne",
+    "infoPhone": "+34 910 000 000"
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  },
+  "legal": {
+    "cookies": "Politique de cookies (UE)",
+    "legal_notice": "Mentions Légales",
+    "accessibility": "Déclaration d'accessibilité",
+    "privacy": "Politique de confidentialité",
+    "cookies_slug": "politique-cookies",
+    "legal_notice_slug": "mentions-legales",
+    "accessibility_slug": "accessibilite",
+    "privacy_slug": "politique-confidentialite"
+  },
+  "officeInfo": {
+    "title": "Notre Cabinet",
+    "p1": "Nous sommes un cabinet pluridisciplinaire en pleine croissance, spécialisé en droit de l'immigration et dédié au droit administratif, civil, pénal, du travail et de la sécurité sociale. Nous conseillons et demandons toute sorte d'aides ou de subventions.",
+    "p2": "Nous disposons d'un service de traduction bilingue en anglais, japonais et italien. Le français est également parlé.",
+    "p3": "Nous collaborons avec le cabinet de conseil fiscal et social Pérez y Porras à Fuengirola, et avec l'étude notariale Pablo Pol Seijas, de pleine confiance à Fuengirola. De plus, nous travaillons avec divers courtiers d'assurance, comme Fuengirola Brokers, entre autres. Nous travaillons dans toute l'Espagne, principalement sur la Costa del Sol de Malaga et à Madrid."
+  },
+  "introQuote": {
+    "title": "Cabinet Pluridisciplinaire",
+    "quote": "Les préceptes du droit sont ceux-ci : vivre honnêtement, ne pas nuire à autrui, donner à chacun ce qui lui revient. C'est l'art du bon et de l'équitable.",
+    "author": "Marcus Tullius Cicero (106 av. J.-C. – 43 av. J.-C.)"
+  }
+}

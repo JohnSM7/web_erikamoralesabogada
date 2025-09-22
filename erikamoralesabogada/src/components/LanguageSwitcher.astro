@@ -1,0 +1,87 @@
+---
+interface Props {
+	currentLang: 'es' | 'en' | 'fr' | 'ja';
+    menuDirection?: 'up' | 'down'; // Prop para controlar la dirección
+}
+
+const { currentLang, menuDirection = 'down' } = Astro.props;
+
+const languages = [
+    { code: 'es', name: 'Español' },
+    { code: 'en', name: 'English' },
+    { code: 'fr', name: 'Français' },
+    { code: 'ja', name: '日本語' },
+];
+
+const currentLanguage = languages.find(lang => lang.code === currentLang);
+---
+
+<div class="language-dropdown">
+    <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+        {currentLanguage?.name}
+        <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="12" height="12"><path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+    </button>
+    <div class:list={["dropdown-menu", { "opens-up": menuDirection === 'up' }]}>
+        {languages.map(lang => (
+            currentLang !== lang.code && <a href={`/${lang.code}/`}>{lang.name}</a>
+        ))}
+    </div>
+</div>
+
+<style>
+    .language-dropdown { position: relative; }
+    .dropdown-toggle { display: flex; align-items: center; gap: 0.5rem; background-color: transparent; border: 1px solid #ddd; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; font-family: inherit; font-weight: bold; color: var(--color-dark-blue); transition: background-color 0.3s ease; }
+    .dropdown-toggle:hover, .language-dropdown.is-open .dropdown-toggle { background-color: var(--color-light-gray); }
+    .dropdown-toggle .chevron { transition: transform 0.3s ease; }
+    .language-dropdown.is-open .dropdown-toggle .chevron { transform: rotate(180deg); }
+    
+    .dropdown-menu { 
+        position: absolute; 
+        right: 0; 
+        background-color: var(--color-white); 
+        border: 1px solid #ddd; 
+        border-radius: 5px; 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+        padding: 0.5rem 0; 
+        z-index: 1050; /* Z-index muy alto para estar por encima de todo */
+        min-width: 150px; 
+        opacity: 0; 
+        visibility: hidden; 
+        transform: translateY(-10px); 
+        transition: all 0.3s ease; 
+    }
+    .dropdown-menu.opens-up {
+        bottom: calc(100% + 5px); /* Se posiciona encima del botón */
+        top: auto;
+    }
+    .dropdown-menu:not(.opens-up) {
+        top: calc(100% + 5px); /* Se posiciona debajo del botón */
+    }
+
+    .language-dropdown.is-open .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-menu a { display: block; padding: 0.75rem 1.5rem; color: var(--color-dark-blue); text-decoration: none; white-space: nowrap; }
+    .dropdown-menu a:hover { background-color: var(--color-light-gray); }
+    
+    :global(.mobile-nav) .dropdown-toggle { color: var(--color-white); border-color: #556681; }
+</style>
+
+<script>
+    const dropdowns = document.querySelectorAll('.language-dropdown');
+    dropdowns.forEach(dropdown => {
+        const toggleButton = dropdown.querySelector('.dropdown-toggle');
+        if (toggleButton) {
+            toggleButton.addEventListener('click', (event) => {
+                event.stopPropagation();
+                dropdowns.forEach(d => { if (d !== dropdown) d.classList.remove('is-open'); });
+                dropdown.classList.toggle('is-open');
+            });
+        }
+    });
+    document.addEventListener('click', (event) => {
+        dropdowns.forEach(dropdown => {
+            if (dropdown.classList.contains('is-open') && !dropdown.contains(event.target as Node)) {
+                dropdown.classList.remove('is-open');
+            }
+        });
+    });
+</script>

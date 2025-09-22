@@ -1,0 +1,39 @@
+---
+import es from '../i18n/es.json';
+import en from '../i18n/en.json';
+import fr from '../i18n/fr.json';
+import ja from '../i18n/ja.json';
+
+const translations = { es, en, fr, ja };
+
+// ¡ESTE BLOQUE ES LA CLAVE DE LA SOLUCIÓN!
+// Le dice a Astro/TypeScript que este componente espera recibir
+// una propiedad llamada 'lang' que solo puede ser 'es', 'en', 'fr', o 'ja'.
+interface Props {
+	lang: 'es' | 'en' | 'fr' | 'ja';
+}
+
+const { lang } = Astro.props;
+const t = translations[lang]; 
+---
+<section class="office-info section section-light">
+    <div class="container">
+        <h2>{t.officeInfo.title}</h2>
+        <p>{t.officeInfo.p1}</p>
+        <p>{t.officeInfo.p2}</p>
+        <p>{t.officeInfo.p3}</p>
+    </div>
+</section>
+
+<style>
+    .office-info h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .office-info p {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+</style>

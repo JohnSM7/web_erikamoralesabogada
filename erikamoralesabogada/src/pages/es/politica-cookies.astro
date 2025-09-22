@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/es.json';
+---
+<Layout title={t.legal.cookies} 
+description="Consulta la Política de Privacidad del despacho de Erika Morales Abogada."
+lang="es">
+    <div class="container section">
+        <h1>{t.legal.cookies}</h1>
+        <div class="legal-content">
+            <p>
+                Este sitio web, al igual que la mayoría de los portales en Internet, usa cookies para mejorar la experiencia del usuario...
+            </p>
+        </div>
+    </div>
+</Layout>
+<style>
+    .legal-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
+    .legal-content p { margin-bottom: 1rem; }
+</style>

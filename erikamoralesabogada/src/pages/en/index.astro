@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/en.json';
+---
+<Layout title="Erika Morales | Lawyer" lang="en">
+    <div class="hero">
+        <div class="container">
+            <h1>{t.homepage.heroTitle}</h1>
+            <p>{t.homepage.heroSubtitle}</p>
+            <a href={`/en/${t.slugs.contact}`} class="cta-button">{t.homepage.heroCta}</a>
+        </div>
+    </div>
+    
+    <section class="section section-light">
+        <div class="container">
+            <h2>Welcome</h2>
+            <p>
+                I offer a personal and professional legal service. My goal is to provide the best strategy and defense for each case, always seeking the most favorable solution for my clients. Browse the site to learn more about my areas of expertise.
+            </p>
+        </div>
+    </section>
+
+</Layout>
+
+<style>
+    .hero {
+        background-color: var(--color-dark-blue);
+        color: var(--color-white);
+        padding: 6rem 0;
+        text-align: center;
+    }
+    .hero h1 {
+        color: var(--color-white);
+        margin-bottom: 1.5rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 2rem auto;
+    }
+</style>

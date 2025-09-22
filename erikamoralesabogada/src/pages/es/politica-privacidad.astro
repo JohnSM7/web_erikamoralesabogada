@@ -1,0 +1,34 @@
+---
+// src/pages/es/politica-privacidad.astro
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/es.json';
+---
+<Layout title={t.legal.privacy} 
+description="Consulta la Política de Privacidad del despacho de Erika Morales Abogada."
+lang="es">
+    <div class="container section">
+        <h1>{t.legal.privacy}</h1>
+        <div class="legal-content">
+            <p><strong>Última actualización: 22 de septiembre de 2025</strong></p>
+
+            <h2>1. Introducción</h2>
+            <p>
+                Bienvenido a la Política de Privacidad de Erika Morales Abogada. Su privacidad es importante para nosotros...
+            </p>
+
+            <h2>2. Datos que recopilamos</h2>
+            <p>
+                Recopilamos información que usted nos proporciona directamente a través de nuestro formulario de contacto...
+            </p>
+            </div>
+    </div>
+</Layout>
+<style>
+    .legal-content h2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .legal-content p, .legal-content li {
+        margin-bottom: 1rem;
+    }
+</style>

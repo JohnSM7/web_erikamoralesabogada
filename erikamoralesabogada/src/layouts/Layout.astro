@@ -1,0 +1,78 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import '../styles/global.css';
+
+
+interface Props {
+	title: string;
+	description: string;
+    lang: 'es' | 'en' | 'fr' | 'ja';
+}
+const { title, description, lang } = Astro.props;
+
+---
+
+<!doctype html>
+<html lang={lang}> {/* Usamos la prop 'lang' para la accesibilidad y el SEO */}
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Asesoramiento legal profesional y personalizado por Erika Morales." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		 <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="canonical" href={Astro.url.href} /> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+        <title>{title}</title>
+		<script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Attorney",
+    "name": "Erika Morales Abogada",
+    "description": "Despacho de abogada especialista en extranjería, derecho civil, penal y laboral en Fuengirola (Málaga) y Madrid.",
+    "url": Astro.url.href,
+    "logo": "https://erikamoralesabogada.com/logo-oscuro.png", // URL completa a tu logo oscuro
+    "image": "https://erikamoralesabogada.com/fondo.jpg", // URL a una imagen representativa
+    "telephone": "+34910000000", // CAMBIAR POR TU TELÉFONO REAL
+    "hasMap": "https://maps.google.com/?cid=TUIDENGOOGLEMAPS", // CAMBIAR POR EL ENLACE A TU UBICACIÓN EN MAPS
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Ficticia 123, Oficina 4",
+        "addressLocality": "Fuengirola",
+        "postalCode": "29640",
+        "addressRegion": "Málaga",
+        "addressCountry": "ES"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "36.5445", // CAMBIAR por la latitud de tu despacho
+        "longitude": "-4.6220" // CAMBIAR por la longitud de tu despacho
+    },
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+        }
+    ]
+})} />
+
+	</head>
+	<body>
+		{/* Aquí colocamos los componentes que se repiten en todas las páginas */}
+		<Header currentLang={lang} />
+
+		<main>
+			{/* El <slot /> es el espacio mágico donde Astro inyectará
+			    el contenido específico de cada página (ej: el contenido de 'index.astro') */}
+			<slot />
+		</main>
+		
+		<Footer currentLang={lang} />
+		<WhatsAppButton />
+	</body>
+</html>
