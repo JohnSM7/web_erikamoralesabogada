@@ -17,7 +17,7 @@
   },
   "aboutpage": {
     "title": "Compromiso con la Justicia y la Excelencia",
-    "intro": "Soy Erika Morales, una abogada dedicada a ofrecer asesoramiento legal personalizado y de alta calidad. Mi principal objetivo es entender a fondo las necesidades de mis clientes para construir estrategias legales sólidas y efectivas.",
+    "intro": "Érika Lizeth Morales Andrade: Nacida en Quito, Ecuador. Graduada en derecho en la célebre Universidad Complutense de Madrid y con Máster de acceso a la abogacía en la prestigiosa Universidad Francisco de Vitoria. Miembro de la Comisión de cultura y formación del Ilustre Colegio de abogados de Málaga en la Delegación de Fuengirola. Ha sido abogada de la oficina de vivienda del Ayuntamiento de Navalcarnero de la Comunidad de Madrid. Así como abogada colaboradora de un importante despacho a nivel estatal en el sector de derecho bancario.",
     "philosophyTitle": "Mi Filosofía",
     "philosophyText": "Creo en una abogacía basada en la confianza, la transparencia y la comunicación constante. Cada caso es único y merece una atención meticulosa. Me comprometo a guiarle a través de cada paso del proceso legal, explicando sus opciones de manera clara para que pueda tomar decisiones informadas.",
     "experienceTitle": "Experiencia y Dedicación",
@@ -44,8 +44,8 @@
     "formMessage": "Su Mensaje",
     "formSend": "Enviar Consulta",
     "infoTitle": "Información de Contacto",
-    "infoAddress": "Calle Ficticia 123, Oficina 4, 28080 Madrid, España",
-    "infoPhone": "+34 910 000 000"
+    "infoAddress": "Calle Antequera 2, piso 2, 29649, Fuengirola, Málaga, España",
+    "infoPhone": "+34 635 04 19 99"
   },
   "footer": {
     "rights": "Todos los derechos reservados."
@@ -61,14 +61,20 @@
     "privacy_slug": "politica-privacidad"
   },
     "officeInfo": {
-    "title": "Nuestro Despacho",
-    "p1": "Somos un despacho multidisciplinar en crecimiento, especialista en extranjería y dedicado al derecho administrativo, civil, penal, laboral y de seguridad social. Asesoramos y solicitamos cualquier clase de ayuda o subvención.",
-    "p2": "Contamos con servicio de traducción en inglés, japonés e italiano, bilingüe. También se habla francés.",
-    "p3": "Colaboramos con la asesoría fiscal y laboral Pérez y Porras de Fuengirola, y con la notaría Pablo Pol Seijas, de plena confianza en Fuengirola. Además, trabajamos con diversas corredurías de seguros, como Fuengirola Brokers, entre otras. Trabajamos por toda España, primordialmente en la Costa del Sol malagueña y en Madrid."
-  },
+      "title": "Nuestro Despacho",
+      "p1": "Somos un despacho multidisciplinar en crecimiento, especialista en extranjería y dedicado al derecho administrativo, civil, penal, laboral y de seguridad social. Asesoramos y solicitamos cualquier clase de ayuda o subvención.",
+      "p2": "Contamos con servicio de traducción de inglés, francés y otros muchos idiomas.",
+      "p3": "En nuestra sede principal de Fuengirola colaboramos con la asesoría <a href=\"https://asesoriaperez.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Pérez y Porras</a> y con la notaría de <a href=\"https://notariapolseijas.es/\" target=\"_blank\" rel=\"noopener noreferrer\">Pablo Pol Seijas</a>, ambas de plena confianza. Además trabajamos con varias corredurías de seguros en toda España, como <a href=\"https://fuengirolabrokers.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Fuengirola Brokers</a>, entre otras."
+    },
+
   "introQuote": {
     "title": "Despacho Multidisciplinar",
     "quote": "El Derecho consiste en tres reglas o principios básicos: vivir honestamente, no dañar a los demás y dar a cada uno lo suyo. Es el arte de lo bueno y lo equitativo.",
     "author": "Marco Tulio Cicerón (106 a.C. – 43 a.C.)"
+  },
+  "thankspage": {
+    "title": "¡Mensaje Enviado!",
+    "subtitle": "Gracias por contactar. He recibido tu consulta y te responderé a la mayor bretad posible.",
+    "cta": "Volver al Inicio"
   }
 }

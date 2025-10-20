@@ -2,9 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 import t from '../../i18n/es.json';
 ---
-<Layout title="Contacto | Erika Morales"
-description="Contacta con Erika Morales Abogada para una consulta legal confidencial. Encuentra mi teléfono, email y dirección en Fuengirola, Málaga."
- lang="es">
+<Layout 
+    title="Contacto | Erika Morales"
+    description="Contacta con Erika Morales Abogada para una consulta legal confidencial. Encuentra mi teléfono, email y dirección en Fuengirola, Málaga."
+    lang="es"
+>
   <div class="page-header">
     <div class="container">
       <h1>{t.contactpage.title}</h1>
@@ -14,7 +16,12 @@ description="Contacta con Erika Morales Abogada para una consulta legal confiden
 
   <section class="section">
     <div class="container contact-grid">
-      <form class="contact-form">
+
+      <form 
+        action="https://formsubmit.co/erikamorales@icamalaga.org" 
+        method="POST" 
+        class="contact-form"
+      >
         <div class="form-group">
           <label for="name">{t.contactpage.formName}</label>
           <input type="text" id="name" name="name" required>
@@ -27,18 +34,22 @@ description="Contacta con Erika Morales Abogada para una consulta legal confiden
           <label for="message">{t.contactpage.formMessage}</label>
           <textarea id="message" name="message" rows="6" required></textarea>
         </div>
+
+        <input type="hidden" name="_next" value="http://localhost:4321/es/gracias">
+        <input type="hidden" name="_subject" value="Nuevo Mensaje desde la Web - Erika Morales Abogada">
+        <input type="text" name="_honey" style="display:none">
+
         <button type="submit" class="cta-button">{t.contactpage.formSend}</button>
       </form>
       <div class="contact-info">
         <h3>{t.contactpage.infoTitle}</h3>
         <p><strong>Dirección:</strong><br>{t.contactpage.infoAddress}</p>
         <p><strong>Teléfono:</strong><br>{t.contactpage.infoPhone}</p>
-        <p><strong>Email:</strong><br>contacto@erikamoralesabogada.com</p>
+        <p><strong>Email:</strong><br>erikamorales@icamalaga.org</p>
       </div>
     </div>
   </section>
 </Layout>
-
 <style>
   .page-header {
     background-color: var(--color-light-gray);

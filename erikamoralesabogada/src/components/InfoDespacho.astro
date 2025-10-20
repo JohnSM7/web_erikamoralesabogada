@@ -21,7 +21,7 @@ const t = translations[lang];
         <h2>{t.officeInfo.title}</h2>
         <p>{t.officeInfo.p1}</p>
         <p>{t.officeInfo.p2}</p>
-        <p>{t.officeInfo.p3}</p>
+        <p set:html={t.officeInfo.p3}></p>
     </div>
 </section>
 
