@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/en.json';
+---
+<Layout
+    title="Cookies Policy | Erika Morales Lawyer"
+    description="Information about the use of cookies on our website. Learn what types of cookies we use and how you can manage or disable them from your browser."
+    lang="en"
+>
+    <div class="page-header">
+        <div class="container">
+            <h1>{t.legal.cookies}</h1>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container legal-content">
+            <p><strong>Last updated:</strong> September 25, 2025</p>
+            
+            <h2>1. What are cookies?</h2>
+            <p>A cookie is a small text file that is stored in your browser when you visit almost any web page. Its purpose is to allow the website to remember your visit when you return to browse that page again.</p>
+
+            <h2>2. What cookies does this website use?</h2>
+            <p>This website uses the following types of cookies:</p>
+            <ul>
+                <li><strong>Technical or functional cookies:</strong> These are essential for the correct operation of the website. They allow, for example, the control of traffic and data communication, or the use of security elements during navigation. Since this website is built with modern technology, it may use technical cookies necessary for its basic functionality, which do not require user consent.</li>
+                <li><strong>Analytics or measurement cookies:</strong> These cookies, whether processed by us or by third parties (such as Google Analytics), allow us to quantify the number of users and thus perform statistical analysis of how the provided service is used. This helps us improve our products or services based on user navigation on our website.</li>
+            </ul>
+
+            <h2>3. How to disable or delete cookies?</h2>
+            <p>You can allow, block, or delete cookies installed on your device by configuring your browser settings. Below are links with information on how to manage your cookie preferences in the main browsers:</p>
+            <ul>
+                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+                <li><a href="https://support.mozilla.org/en-US/kb/enabledisable-cookies-preferences" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+                <li><a href="https://support.microsoft.com/en-us/windows/delete-and-manage-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener noreferrer">Internet Explorer / Edge</a></li>
+                <li><a href="https://support.apple.com/en/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+            </ul>
+            <p>Disabling cookies may affect the functionality of this website.</p>
+        </div>
+    </section>
+</Layout>
+
+<style>
+  .page-header { background-color: var(--color-light-gray); padding: 3rem 0; text-align: center; border-bottom: 1px solid #ddd; }
+  .legal-content { max-width: 800px; }
+  .legal-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .legal-content p, .legal-content li { margin-bottom: 1rem; line-height: 1.7; }
+  .legal-content ul { list-style-position: inside; }
+</style>

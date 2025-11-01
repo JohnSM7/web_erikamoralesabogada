@@ -1,6 +1,6 @@
 {
   "slugs": {
-    "about": "about",
+    "about": "about-me",
     "services": "services",
     "contact": "contact"
   },
@@ -13,62 +13,73 @@
   "homepage": {
     "heroTitle": "Legal Defense, Real Solutions.",
     "heroSubtitle": "Commitment, experience, and dedication to protect your rights and interests.",
-    "heroCta": "Request a Consultation"
+    "heroCta": "Request Consultation"
   },
   "aboutpage": {
     "title": "Commitment to Justice and Excellence",
-    "intro": "I am Erika Morales, a lawyer dedicated to offering personalized, high-quality legal advice. My main goal is to thoroughly understand my clients' needs to build solid and effective legal strategies.",
+    "intro": "Érika Lizeth Morales Andrade: Born in Quito, Ecuador. Law graduate from the renowned Complutense University of Madrid, with a Master’s Degree in Access to the Legal Profession from the prestigious Francisco de Vitoria University. Member of the Culture and Training Commission of the Illustrious Bar Association of Málaga, Fuengirola Delegation. She has served as an attorney at the Housing Office of the Navalcarnero City Council in the Community of Madrid, as well as a collaborating lawyer for a major national law firm in the banking law sector.",
     "philosophyTitle": "My Philosophy",
-    "philosophyText": "I believe in a legal practice based on trust, transparency, and constant communication. Every case is unique and deserves meticulous attention. I am committed to guiding you through every step of the legal process, clearly explaining your options so you can make informed decisions.",
+    "philosophyText": "I believe in practicing law based on trust, transparency, and constant communication. Every case is unique and deserves meticulous attention. I am committed to guiding you through each step of the legal process, clearly explaining your options so you can make informed decisions.",
     "experienceTitle": "Experience and Dedication",
-    "experienceText": "With a strong track record in various areas of law, I have represented clients in complex negotiations and demanding litigation. My dedication is to secure the best possible outcome for you, your family, or your business.",
-    "cta": "Let's discuss your case"
+    "experienceText": "With a solid background in various areas of law, I have represented clients in complex negotiations and demanding litigation. My dedication is to ensure the best possible outcome for you, your family, or your business.",
+    "cta": "Let’s Talk About Your Case"
   },
   "servicespage": {
     "title": "Practice Areas",
-    "subtitle": "I offer expert legal representation in a variety of disciplines for individuals and businesses.",
+    "subtitle": "I offer expert legal representation across a wide range of disciplines for individuals and businesses.",
     "civilTitle": "Civil Law",
-    "civilText": "Defense and representation in cases involving contracts, debt claims, civil liability, leases, and property law.",
+    "civilText": "Defense and representation in cases involving contracts, debt claims, civil liability, leases, and property matters.",
     "familyTitle": "Family Law",
-    "familyText": "Guidance in divorce proceedings, child custody, alimony, inheritances, and estate planning.",
+    "familyText": "Advice on divorce proceedings, child custody, alimony, inheritance, and estate planning.",
     "penalTitle": "Criminal Law",
-    "penalText": "Assistance and defense at all stages of the criminal process, from arrest to trial, for all types of offenses.",
+    "penalText": "Legal assistance and defense throughout all stages of criminal proceedings, from arrest to trial, for all types of offenses.",
     "immigrationTitle": "Immigration Law",
-    "immigrationText": "Management of residence permits, nationality applications, family reunification, and appeals against denials."
+    "immigrationText": "Processing of residence permits, nationality applications, family reunifications, and appeals against denials."
   },
   "contactpage": {
     "title": "Contact",
-    "subtitle": "I am here to help. Send your inquiry using the form or the direct contact details. The first consultation is confidential.",
+    "subtitle": "I’m here to help. Send your inquiry through the form or use the direct contact details. The first consultation is confidential.",
     "formName": "Full Name",
     "formEmail": "Email Address",
     "formMessage": "Your Message",
     "formSend": "Send Inquiry",
     "infoTitle": "Contact Information",
-    "infoAddress": "123 Fictional Street, Office 4, 28080 Madrid, Spain",
-    "infoPhone": "+34 910 000 000"
+    "infoAddress": "Calle Antequera 2, 2nd floor, 29649, Fuengirola, Málaga, Spain",
+    "infoPhone": "+34 635 04 19 99"
   },
   "footer": {
     "rights": "All rights reserved."
   },
   "legal": {
-    "cookies": "Cookie Policy (EU)",
+    "cookies": "Cookies Policy (EU)",
     "legal_notice": "Legal Notice",
     "accessibility": "Accessibility Statement",
     "privacy": "Privacy Policy",
-    "cookies_slug": "cookie-policy",
+    "cookies_slug": "cookies-policy",
     "legal_notice_slug": "legal-notice",
     "accessibility_slug": "accessibility",
     "privacy_slug": "privacy-policy"
   },
-  "officeInfo": {
-    "title": "Our Firm",
-    "p1": "We are a growing multidisciplinary firm, specializing in immigration law and dedicated to administrative, civil, criminal, labor, and social security law. We advise on and apply for all types of aid and grants.",
-    "p2": "We offer bilingual translation services in English, Japanese, and Italian. French is also spoken.",
-    "p3": "We collaborate with the tax and labor consultancy Pérez y Porras in Fuengirola, and with the notary Pablo Pol Seijas, a trusted professional in Fuengirola. Additionally, we work with various insurance brokerages, such as Fuengirola Brokers, among others. We operate throughout Spain, primarily on the Costa del Sol in Málaga and in Madrid."
-  },
   "introQuote": {
-    "title": "Multidisciplinary Firm",
-    "quote": "The basic principles of law are these: to live honestly, not to harm others, and to give to each their own. It is the art of the good and the equitable.",
+    "title": "Multidisciplinary Law Firm",
+    "quote": "Law consists of three basic principles: to live honestly, to harm no one, and to give each their due. It is the art of the good and the equitable.",
     "author": "Marcus Tullius Cicero (106 BC – 43 BC)"
+  },
+  "officeInfo": {
+    "title": "Our Law Firm",
+    "p1": "We are a growing multidisciplinary law firm, specialized in immigration law and dedicated to administrative, civil, criminal, labor, and social security law. Our goal is to provide a comprehensive and personalized service, tailored to each client’s needs. We advise and manage all types of legal procedures, as well as applications for grants and subsidies, always ensuring a close, professional, and efficient approach."
+  },
+  "officeInfo2": {
+    "title": "Trusted Collaborators and Partners",
+    "p2": "At our main office in Fuengirola, we collaborate with the accounting firm <a href=\"https://asesoriaperez.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Pérez y Porras</a> and with the notary office of <a href=\"https://notariapolseijas.es/\" target=\"_blank\" rel=\"noopener noreferrer\">Pablo Pol Seijas</a>, both fully trusted partners. We also work with several insurance brokerages across Spain, such as <a href=\"https://fuengirolabrokers.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Fuengirola Brokers</a>, among others."
+  },
+  "officeInfo3": {
+    "title": "Multilingual Service for Our Clients",
+    "p3": "We offer translation services in English, French, and many other languages, providing linguistic support for both official documents and communications with clients or international partners."
+  },
+  "thankspage": {
+    "title": "Message Sent!",
+    "subtitle": "Thank you for getting in touch. I have received your inquiry and will reply as soon as possible.",
+    "cta": "Return to Home"
   }
 }

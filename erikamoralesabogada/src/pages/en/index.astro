@@ -1,8 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import InfoDespacho from '../../components/InfoDespacho.astro';
+import ContentImageSplit from '../../components/ContentImageSplit.astro';
 import t from '../../i18n/en.json';
 ---
-<Layout title="Erika Morales | Lawyer" lang="en">
+<Layout title="Erika Morales | Lawyer" description="Professional legal services by Erika Morales" lang="en">
     <div class="hero">
         <div class="container">
             <h1>{t.homepage.heroTitle}</h1>
@@ -10,15 +12,33 @@ import t from '../../i18n/en.json';
             <a href={`/en/${t.slugs.contact}`} class="cta-button">{t.homepage.heroCta}</a>
         </div>
     </div>
-    
-    <section class="section section-light">
+
+    <section class="quote-section section">
         <div class="container">
-            <h2>Welcome</h2>
-            <p>
-                I offer a personal and professional legal service. My goal is to provide the best strategy and defense for each case, always seeking the most favorable solution for my clients. Browse the site to learn more about my areas of expertise.
-            </p>
+            <h2>{t.introQuote.title}</h2>
+            <blockquote>
+                "{t.introQuote.quote}"
+                <cite>– {t.introQuote.author}</cite>
+            </blockquote>
         </div>
     </section>
+    <InfoDespacho lang="es" />
+
+    <ContentImageSplit 
+        title={t.officeInfo2.title}
+        imageSrc="/erika1.png"
+        imageAlt="Erika Morales">
+        <p set:html={t.officeInfo2.p2}></p>
+    </ContentImageSplit>
+
+    <ContentImageSplit 
+        title={t.officeInfo3.title}
+        imageSrc="/erika3.jpg"
+        imageAlt="Imagen conceptual sobre experiencia y dedicación"
+        reverse={true}
+    >
+        <p>{t.officeInfo3.p3}</p>
+    </ContentImageSplit>
 
 </Layout>
 

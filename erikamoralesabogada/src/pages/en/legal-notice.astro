@@ -2,17 +2,50 @@
 import Layout from '../../layouts/Layout.astro';
 import t from '../../i18n/en.json';
 ---
-<Layout title={t.legal.legal_notice} lang="en">
-    <div class="container section">
-        <h1>{t.legal.legal_notice}</h1>
-        <div class="legal-content">
-            <p>
-                In compliance with the duty of information contained in the applicable regulations, the following data is reflected below...
-            </p>
+<Layout
+    title="Legal Notice | Erika Morales Lawyer"
+    description="Check the legal notice of Erika Morales' law firm. Information about the website owner, intellectual property, and applicable law."
+    lang="en"
+>
+    <div class="page-header">
+        <div class="container">
+            <h1>{t.legal.legal_notice}</h1>
         </div>
     </div>
+
+    <section class="section">
+        <div class="container legal-content">
+            <h2>1. Owner Identification Details</h2>
+            <p>In compliance with Article 10 of Law 34/2002, of July 11, on Information Society Services and Electronic Commerce (LSSI-CE), the identification details of the owner of this website are as follows:</p>
+            <ul>
+                <li><strong>Owner:</strong> Erika Lizeth Morales Andrade (hereinafter, "the Owner")</li>
+                <li><strong>Bar Association Number:</strong> [Membership Number] of the Bar Association of [City, e.g., Málaga]</li>
+                <li><strong>Tax ID:</strong> [Tax Identification Number]</li>
+                <li><strong>Professional Address:</strong> Calle Antequera 2, piso 2, 29649, Fuengirola, Málaga, España</li>
+                <li><strong>Email:</strong> erikamorales@icamalaga.org</li>
+                <li><strong>Phone:</strong> +34 635 04 19 99</li>
+            </ul>
+
+            <h2>2. Purpose and Acceptance</h2>
+            <p>This Legal Notice regulates access to and use of the website, which aims to provide information about the legal services offered by the Owner. Browsing the website implies the status of user and entails full and unconditional acceptance of all provisions included in this Legal Notice.</p>
+
+            <h2>3. Intellectual and Industrial Property</h2>
+            <p>All intellectual and industrial property rights of the website and its contents (texts, images, designs, logos, software) belong to the Owner or, where applicable, to third parties. Users may view elements of the site and even print, copy, and store them on their computer's hard drive or any other physical medium, provided it is solely for personal and private use.</p>
+
+            <h2>4. Disclaimer</h2>
+            <p>The content of this website is general in nature and is provided for purely informational purposes. Full access to all contents, their completeness, accuracy, timeliness, or suitability for a specific purpose is not guaranteed.</p>
+            <p>The Owner is not responsible for any damages of any kind that may result, including but not limited to: errors or omissions in the content, unavailability of the website, or transmission of viruses or malicious programs, even after all necessary technological measures have been taken to prevent them.</p>
+
+            <h2>5. Applicable Law and Jurisdiction</h2>
+            <p>For the resolution of all disputes or issues related to this website or activities conducted through it, Spanish law shall apply, to which the parties expressly submit. The courts and tribunals of [Jurisdiction City, e.g., Fuengirola] shall have exclusive jurisdiction over any disputes arising from or related to its use.</p>
+        </div>
+    </section>
 </Layout>
+
 <style>
-    .legal-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
-    .legal-content p { margin-bottom: 1rem; }
+  .page-header { background-color: var(--color-light-gray); padding: 3rem 0; text-align: center; border-bottom: 1px solid #ddd; }
+  .legal-content { max-width: 800px; }
+  .legal-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .legal-content p, .legal-content li { margin-bottom: 1rem; line-height: 1.7; }
+  .legal-content ul { list-style-position: inside; }
 </style>

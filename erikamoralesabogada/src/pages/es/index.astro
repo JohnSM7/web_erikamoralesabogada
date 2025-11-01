@@ -31,20 +31,19 @@ import t from '../../i18n/es.json';
     <InfoDespacho lang="es" />
 
     <ContentImageSplit 
-        title={t.aboutpage.philosophyTitle}
+        title={t.officeInfo2.title}
         imageSrc="/erika1.png"
-        imageAlt="Erika Morales"
-    >
-        <p>{t.aboutpage.philosophyText}</p>
+        imageAlt="Erika Morales">
+        <p set:html={t.officeInfo2.p2}></p>
     </ContentImageSplit>
 
     <ContentImageSplit 
-        title={t.aboutpage.experienceTitle}
+        title={t.officeInfo3.title}
         imageSrc="/erika3.jpg"
         imageAlt="Imagen conceptual sobre experiencia y dedicación"
         reverse={true}
     >
-        <p>{t.aboutpage.experienceText}</p>
+        <p>{t.officeInfo3.p3}</p>
     </ContentImageSplit>
 
 </Layout>

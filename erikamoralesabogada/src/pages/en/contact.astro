@@ -1,0 +1,103 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/en.json';
+---
+<Layout 
+    title="Contact | Erika Morales"
+    description="Contact Erika Morales Lawyer for a confidential legal consultation. Find my phone number, email, and address in Fuengirola, Málaga."
+    lang="en">
+  <div class="page-header">
+    <div class="container">
+      <h1>{t.contactpage.title}</h1>
+      <p>{t.contactpage.subtitle}</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container contact-grid">
+
+      <form 
+        action="https://formsubmit.co/erikamorales@icamalaga.org" 
+        method="POST" 
+        class="contact-form"
+      >
+        <div class="form-group">
+          <label for="name">{t.contactpage.formName}</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">{t.contactpage.formEmail}</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">{t.contactpage.formMessage}</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <input type="hidden" name="_next" value="http://localhost:4321/es/gracias">
+        <input type="hidden" name="_subject" value="Nuevo Mensaje desde la Web - Erika Morales Abogada">
+        <input type="text" name="_honey" style="display:none">
+
+        <button type="submit" class="cta-button">{t.contactpage.formSend}</button>
+      </form>
+      <div class="contact-info">
+        <h3>{t.contactpage.infoTitle}</h3>
+        <p><strong>Address:</strong><br>{t.contactpage.infoAddress}</p>
+        <p><strong>Mobile:</strong><br>{t.contactpage.infoPhone}</p>
+        <p><strong>Email:</strong><br>erikamorales@icamalaga.org</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+<style>
+  .page-header {
+    background-color: var(--color-light-gray);
+    padding: 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+   .page-header p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Dos columnas para escritorio */
+    gap: 3rem;
+  }
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  .contact-info {
+    background-color: var(--color-light-gray);
+    padding: 2rem;
+    border-radius: 5px;
+  }
+  .contact-info p {
+    margin-bottom: 1rem;
+  }
+
+  /* --- ESTA ES LA CORRECCIÓN PARA MÓVILES --- */
+  @media (max-width: 768px) {
+    .contact-grid {
+        /* Cambiamos a una sola columna */
+        grid-template-columns: 1fr;
+        /* Reducimos el espacio entre elementos */
+        gap: 2.5rem;
+    }
+  }
+</style>

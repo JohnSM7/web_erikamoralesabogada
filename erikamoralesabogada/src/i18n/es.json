@@ -60,18 +60,26 @@
     "accessibility_slug": "accesibilidad",
     "privacy_slug": "politica-privacidad"
   },
-    "officeInfo": {
-      "title": "Nuestro Despacho",
-      "p1": "Somos un despacho multidisciplinar en crecimiento, especialista en extranjería y dedicado al derecho administrativo, civil, penal, laboral y de seguridad social. Asesoramos y solicitamos cualquier clase de ayuda o subvención.",
-      "p2": "Contamos con servicio de traducción de inglés, francés y otros muchos idiomas.",
-      "p3": "En nuestra sede principal de Fuengirola colaboramos con la asesoría <a href=\"https://asesoriaperez.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Pérez y Porras</a> y con la notaría de <a href=\"https://notariapolseijas.es/\" target=\"_blank\" rel=\"noopener noreferrer\">Pablo Pol Seijas</a>, ambas de plena confianza. Además trabajamos con varias corredurías de seguros en toda España, como <a href=\"https://fuengirolabrokers.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Fuengirola Brokers</a>, entre otras."
-    },
-
-  "introQuote": {
+    "introQuote": {
     "title": "Despacho Multidisciplinar",
     "quote": "El Derecho consiste en tres reglas o principios básicos: vivir honestamente, no dañar a los demás y dar a cada uno lo suyo. Es el arte de lo bueno y lo equitativo.",
     "author": "Marco Tulio Cicerón (106 a.C. – 43 a.C.)"
   },
+    "officeInfo": {
+      "title": "Nuestro Despacho",
+      "p1": "Somos un despacho multidisciplinar en crecimiento, especialista en extranjería y dedicado al derecho administrativo, civil, penal, laboral y de seguridad social. Nuestro objetivo es ofrecer un servicio integral y personalizado, adaptado a las necesidades de cada cliente. Asesoramos y gestionamos todo tipo de trámites legales, así como la solicitud de ayudas y subvenciones, garantizando siempre un trato cercano, profesional y eficaz."
+    },
+        "officeInfo2": {
+      "title": "Colaboradores y Partners de Confianza",
+      "p2": "En nuestra sede principal de Fuengirola colaboramos con la asesoría <a href=\"https://asesoriaperez.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Pérez y Porras</a> y con la notaría de <a href=\"https://notariapolseijas.es/\" target=\"_blank\" rel=\"noopener noreferrer\">Pablo Pol Seijas</a>, ambas de plena confianza. Además trabajamos con varias corredurías de seguros en toda España, como <a href=\"https://fuengirolabrokers.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Fuengirola Brokers</a>, entre otras."
+    },
+        "officeInfo3": {
+      "title": "Servicio Multilingüe para Nuestros Clientes",
+      "p3": "Contamos con servicio de traducción de inglés, francés y otros muchos idiomas, ofreciendo apoyo lingüístico tanto para documentos oficiales como para comunicaciones con clientes o proveedores internacionales."
+    },
+    
+
+
   "thankspage": {
     "title": "¡Mensaje Enviado!",
     "subtitle": "Gracias por contactar. He recibido tu consulta y te responderé a la mayor bretad posible.",
