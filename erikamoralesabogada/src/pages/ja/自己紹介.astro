@@ -1,13 +1,13 @@
 ---
-// src/pages/fr/a-propos.astro (VERSIÓN FRANCÉS)
+// src/pages/ja/sobre-mi.astro (VERSIÓN JAPONÉS)
 import Layout from '../../layouts/Layout.astro';
-import ContentImageSplit from '../../components/ContentImageSplit.astro'; // <-- 1. Importamos el componente
-import t from '../../i18n/fr.json';
+import ContentImageSplit from '../../components/ContentImageSplit.astro'; 
+import t from '../../i18n/ja.json';
 ---
 
-<Layout title="À Propos de Moi | Erika Morales" 
-description="Découvrez Erika Morales, avocate dotée d'une solide expérience dans divers domaines du droit. Ma philosophie repose sur la confiance, la transparence et le dévouement."
-lang="fr">
+<Layout title="私について | エリカ・モラレス" 
+description="エリカ・モラレス弁護士の紹介。多様な法分野での確かな経験。私の理念は信頼、透明性、そして献身に基づいています。"
+lang="ja">
 
   <div class="page-header">
     <div class="container">
@@ -19,7 +19,7 @@ lang="fr">
   <ContentImageSplit 
     title={t.aboutpage.philosophyTitle}
     imageSrc="/erika1_1.jpg"
-    imageAlt="Image conceptuelle sur la philosophie du cabinet"
+    imageAlt="事務所の理念に関するコンセプト画像"
   >
     <p>{t.aboutpage.philosophyText}</p>
   </ContentImageSplit>
@@ -27,7 +27,7 @@ lang="fr">
   <ContentImageSplit 
     title={t.aboutpage.experienceTitle}
     imageSrc="/erika2.jpg"
-    imageAlt="Image conceptuelle sur l'expérience et le dévouement"
+    imageAlt="経験と献身についてのコンセプト画像"
     reverse={true}
   >
     <p>{t.aboutpage.experienceText}</p>

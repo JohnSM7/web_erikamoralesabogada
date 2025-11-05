@@ -2,18 +2,60 @@
 import Layout from '../../layouts/Layout.astro';
 import t from '../../i18n/fr.json';
 ---
-<Layout title={t.legal.privacy} lang="fr">
-    <div class="container section">
-        <h1>{t.legal.privacy}</h1>
-        <div class="legal-content">
-            <p><strong>Dernière mise à jour : 22 septembre 2025</strong></p>
-            <p>
-                Bienvenue dans la Politique de confidentialité d'Erika Morales, Avocate. Votre vie privée est importante pour nous...
-            </p>
+<Layout
+    title="Politique de Confidentialité | Erika Morales Avocate"
+    description="Informations sur le traitement des données personnelles, finalité, base légale, droits de la personne concernée et politique de protection des données conformément au RGPD."
+    lang="fr"
+>
+    <div class="page-header">
+        <div class="container">
+            <h1>{t.legal.privacy}</h1>
         </div>
     </div>
+
+    <section class="section">
+        <div class="container legal-content">
+            <p><strong>Dernière mise à jour :</strong> 25 septembre 2025</p>
+
+            <h2>1. Responsable du Traitement des Données</h2>
+            <ul>
+                <li><strong>Propriétaire :</strong> Erika Lizeth Morales Andrade (ci-après, "le Propriétaire")</li>
+                <li><strong>Membre du Barreau N° : 10.395</strong> de l'Ordre des Avocats de Malaga</li>
+                <li><strong>Adresse Professionnelle :</strong> Calle Antequera 2, piso 2, 29649, Fuengirola, Málaga, Espagne</li>
+                <li><strong>Email :</strong> erikamorales@icamalaga.org</li>
+                <li><strong>Téléphone :</strong> +34 635 04 19 99</li>
+            </ul>
+
+            <h2>2. Finalité du Traitement de vos Données</h2>
+            <p>Le Propriétaire traitera les informations que vous nous fournissez via le formulaire de contact et d'autres moyens aux fins suivantes :</p>
+            <ul>
+                <li>Gérer et répondre aux consultations, demandes d'information ou requêtes reçues.</li>
+                <li>Gérer la relation précontractuelle ou contractuelle si vous demandez nos services professionnels.</li>
+                <li>Envoyer des communications informatives sur les nouveautés législatives ou les activités du cabinet, uniquement si vous y avez expressément consenti.</li>
+            </ul>
+
+            <h2>3. Base Légale du Traitement</h2>
+            <p>La base légale pour le traitement de vos données est le <strong>consentement de la personne concernée</strong>, donné en cochant la case d'acceptation correspondante et en envoyant le formulaire, ou en contactant volontairement le Propriétaire. Pour la gestion des services professionnels, la base sera l'exécution d'un contrat ou de mesures précontractuelles.</p>
+
+            <h2>4. Durée de Conservation des Données</h2>
+            <p>Les données personnelles fournies seront conservées pendant le temps strictement nécessaire pour accomplir la finalité pour laquelle elles ont été collectées et pour déterminer les éventuelles responsabilités qui pourraient découler de ladite finalité. Dans le cas des clients, elles seront conservées pendant toute la durée de la relation professionnelle et, par la suite, pendant les délais légalement requis.</p>
+
+            <h2>5. Destinataires des Données</h2>
+            <p>Vos données ne seront pas cédées à des tiers, sauf obligation légale. Pour le bon fonctionnement du site web, il est possible que certains fournisseurs de services technologiques (hébergement, etc.) puissent avoir accès à vos données, toujours dans le cadre d'un contrat de sous-traitant garantissant leur confidentialité et leur sécurité.</p>
+
+            <h2>6. Droits de la Personne Concernée</h2>
+            <p>Vous avez le droit d'obtenir la confirmation que nous traitons ou non vos données personnelles. De même, vous avez le droit d'<strong>accéder</strong> à vos données personnelles, de demander la <strong>rectification</strong> des données inexactes ou, le cas échéant, de demander leur <strong>suppression</strong> lorsque, entre autres motifs, les données ne sont plus nécessaires aux fins pour lesquelles elles ont été collectées.</p>
+            <p>Dans certaines circonstances, vous pourrez demander la <strong>limitation du traitement</strong> de vos données, auquel cas nous ne les conserverons que pour l'exercice ou la défense de réclamations. Vous pourrez également vous opposer au traitement de vos données et demander leur <strong>portabilité</strong>.</p>
+            <p>Vous pouvez exercer vos droits en envoyant un e-mail à erikamorales@icamalaga.org en indiquant vos nom, prénom(s) et en joignant une copie de votre pièce d'identité.</p>
+            <p>Si vous considérez que vos droits n'ont pas été dûment respectés, vous avez le droit de déposer une réclamation auprès de l'Agence Espagnole de Protection des Données (AEPD).</p>
+        </div>
+    </section>
 </Layout>
+
 <style>
-    .legal-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
-    .legal-content p { margin-bottom: 1rem; }
+  .page-header { background-color: var(--color-light-gray); padding: 3rem 0; text-align: center; border-bottom: 1px solid #ddd; }
+  .legal-content { max-width: 800px; }
+  .legal-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .legal-content p, .legal-content li { margin-bottom: 1rem; line-height: 1.7; }
+  .legal-content ul { list-style-position: inside; }
 </style>

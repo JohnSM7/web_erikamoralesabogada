@@ -2,17 +2,47 @@
 import Layout from '../../layouts/Layout.astro';
 import t from '../../i18n/fr.json';
 ---
-<Layout title={t.legal.accessibility} lang="fr">
-    <div class="container section">
-        <h1>{t.legal.accessibility}</h1>
-        <div class="legal-content">
-            <p>
-                Erika Morales s'est engagée à rendre son site web accessible conformément aux normes d'accessibilité en vigueur...
-            </p>
+<Layout
+    title="Déclaration d'Accessibilité | Erika Morales Avocate"
+    description="Engagement en faveur de l'accessibilité web. Informations sur le niveau de conformité de notre site web avec les directives WCAG et comment nous contacter pour signaler des incidents."
+    lang="fr"
+>
+    <div class="page-header">
+        <div class="container">
+            <h1>{t.legal.accessibility}</h1>
         </div>
     </div>
+
+    <section class="section">
+        <div class="container legal-content">
+            <p>Erika Lizeth Morales Andrade s'est engagée à rendre son site web accessible, conformément au Décret Royal 1112/2018, du 7 septembre, sur l'accessibilité des sites web et applications pour appareils mobiles du secteur public, et aux directives WCAG 2.1.</p>
+            
+            <h2>1. État de Conformité</h2>
+            <p>Ce site web a été développé en utilisant des technologies et pratiques modernes dans le but d'être <strong>partiellement conforme</strong> aux directives mentionnées. Un travail continu est effectué pour améliorer l'expérience utilisateur pour tous, en appliquant les standards d'accessibilité pertinents.</p>
+
+            <h2>2. Contenu non Accessible</h2>
+            <p>Malgré nos efforts, il est possible que certains contenus ou fonctionnalités spécifiques ne soient pas entièrement accessibles. Nous travaillons pour résoudre ces limitations. Si vous rencontrez des difficultés, nous vous remercions de nous le faire savoir.</p>
+
+            <h2>3. Préparation de la présente déclaration d'accessibilité</h2>
+            <p>La présente déclaration a été préparée le 25 septembre 2025.</p>
+            <p>La méthode utilisée pour préparer la déclaration a été une auto-évaluation réalisée par le développeur du site lui-même.</p>
+
+            <h2>4. Observations et Coordonnées</h2>
+            <p>Vous pouvez effectuer des communications concernant les exigences d'accessibilité (article 10.2.a du RD 1112/2018) comme, par exemple :</p>
+            <ul>
+                <li>Signaler tout manquement éventuel de ce site web.</li>
+                <li>Transmettre d'autres difficultés d'accès au contenu.</li>
+                <li>Formuler toute autre consultation ou suggestion d'amélioration relative à l'accessibilité du site web.</li>
+            </ul>
+            <p>Vous pouvez le faire via l'adresse e-mail <strong>erikamorales@icamalaga.org</strong> ou via le formulaire de contact disponible sur ce site web. Les communications seront reçues et traitées par Erika Lizeth Morales Andrade.</p>
+        </div>
+    </section>
 </Layout>
+
 <style>
-    .legal-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
-    .legal-content p { margin-bottom: 1rem; }
+  .page-header { background-color: var(--color-light-gray); padding: 3rem 0; text-align: center; border-bottom: 1px solid #ddd; }
+  .legal-content { max-width: 800px; }
+  .legal-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .legal-content p, .legal-content li { margin-bottom: 1rem; line-height: 1.7; }
+  .legal-content ul { list-style-position: inside; }
 </style>

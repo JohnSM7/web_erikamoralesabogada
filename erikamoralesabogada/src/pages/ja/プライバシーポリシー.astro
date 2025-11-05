@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/ja.json';
+---
+<Layout
+    title="プライバシーポリシー | エリカ・モラレス弁護士"
+    description="個人データの取り扱い、目的、法的根拠、データ主体の権利、およびGDPRに準拠したデータ保護ポリシーに関する情報。"
+    lang="ja"
+>
+    <div class="page-header">
+        <div class="container">
+            <h1>{t.legal.privacy}</h1>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container legal-content">
+            <p><strong>最終更新日:</strong> 2025年9月25日</p>
+
+            <h2>1. データ管理責任者</h2>
+            <ul>
+                <li><strong>所有者:</strong> Erika Lizeth Morales Andrade (以下、「所有者」)</li>
+                <li><strong>弁護士会登録番号: 10.395</strong> (マラガ弁護士会)</li>
+                <li><strong>事務所住所:</strong> Calle Antequera 2, piso 2, 29649, Fuengirola, Málaga, España</li>
+                <li><strong>Eメール:</strong> erikamorales@icamalaga.org</li>
+                <li><strong>電話番号:</strong> +34 635 04 19 99</li>
+            </ul>
+
+            <h2>2. データ処理の目的</h2>
+            <p>所有者は、お問い合わせフォームやその他の手段を通じてご提供いただいた情報を、以下の目的で処理します：</p>
+            <ul>
+                <li>受け取ったお問い合わせ、情報提供の依頼、または要請の管理および回答。</li>
+                <li>当事務所の専門サービスをご依頼いただいた場合の、契約前または契約関係の管理。</li>
+                <li>法律の最新情報や事務所の活動に関する情報提供（お客様が明示的に同意された場合のみ）。</li>
+            </ul>
+
+            <h2>3. 処理の法的根拠</h2>
+            <p>お客様のデータを処理する法的根拠は、対応する承諾ボックスにチェックを入れてフォームを送信する、または所有者に自発的に連絡することによって与えられる<strong>データ主体の同意</strong>です。専門サービスの管理については、契約の履行または契約前の措置が法的根拠となります。</p>
+
+            <h2>4. データの保存期間</h2>
+            <p>提供された個人データは、収集目的を達成するために厳密に必要な期間、および当該目的から生じうる責任を判断するために必要な期間保存されます。クライアントの場合、専門的関係が続く間、その後は法的に要求される期間保存されます。</p>
+
+            <h2>5. データの受領者</h2>
+            <p>法的義務がある場合を除き、お客様のデータが第三者に譲渡されることはありません。ウェブサイトの適切な機能のため、特定の技術サービスプロバイダー（ホスティングなど）がお客様のデータにアクセスする可能性がありますが、その場合もデータの機密性と安全性を保証する処理委託契約に基づいています。</p>
+
+            <h2>6. データ主体の権利</h2>
+            <p>お客様は、当事務所がお客様の個人データを処理しているかどうかの確認を得る権利があります。同様に、ご自身の個人データに<strong>アクセス</strong>する権利、不正確なデータの<strong>訂正</strong>を要求する権利、または、データが収集された目的にもはや必要でなくなった場合などに、その<strong>削除</strong>を要求する権利があります。</p>
+            <p>特定の状況下では、お客様はご自身のデータの<strong>処理制限</strong>を要求することができます。その場合、当事務所は請求の行使または防御のためにのみデータを保持します。また、お客様はご自身のデータの処理に異議を唱え、データの<strong>ポータビリティ</strong>を要求することもできます。</p>
+            <p>お客様は、お名前、苗字を明記し、DNI（スペインの身分証明書）のコピーを添付して、erikamorales@icamalaga.org 宛にEメールを送信することにより、ご自身の権利を行使することができます。</p>
+            <p>ご自身の権利が適切に処理されていないと思われる場合は、スペインデータ保護庁 (AEPD) に苦情を申し立てる権利があります。</p>
+        </div>
+    </section>
+</Layout>
+
+<style>
+  .page-header { background-color: var(--color-light-gray); padding: 3rem 0; text-align: center; border-bottom: 1px solid #ddd; }
+  .legal-content { max-width: 800px; }
+  .legal-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .legal-content p, .legal-content li { margin-bottom: 1rem; line-height: 1.7; }
+  .legal-content ul { list-style-position: inside; }
+</style>

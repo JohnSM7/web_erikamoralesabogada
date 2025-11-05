@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/ja.json';
+---
+<Layout
+    title="アクセシビリティ宣言 | エリカ・モラレス弁護士"
+    description="ウェブアクセシビリティへの取り組み。当サイトのWCAGガイドラインへの準拠レベル、および問題報告のための連絡先に関する情報。"
+    lang="ja"
+>
+    <div class="page-header">
+        <div class="container">
+            <h1>{t.legal.accessibility}</h1>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container legal-content">
+            <p>Erika Lizeth Morales Andradeは、公共部門のウェブサイトおよびモバイルアプリケーションのアクセシビリティに関する2018年9月7日の王立令1112/2018号、およびWCAG 2.1ガイドラインに従い、自身のウェブサイトをアクセシブルにすることに尽力しています。</p>
+            
+            <h2>1. 準拠状況</h2>
+            <p>本ウェブサイトは、前述のガイドラインに<strong>部分的に準拠</strong>することを目標に、最新の技術と実践を用いて開発されました。関連するアクセシビリティ基準を適用し、すべての人々のユーザーエクスペリエンスを向上させるために継続的に取り組んでいます。</p>
+
+            <h2>2. アクセシブルでないコンテンツ</h2>
+            <p>私たちの努力にもかかわらず、一部の特定のコンテンツまたは機能が完全にアクセシブルでない可能性があります。これらの制限を解決するために取り組んでいます。何か困難に直面した場合は、ご報告いただけると幸いです。</p>
+
+            <h2>3. 本アクセシビリティ宣言の準備</h2>
+            <p>本宣言は2025年9月25日に準備されました。</p>
+            <p>宣言の準備に用いられた方法は、サイトの開発者自身によって実施された自己評価です。</p>
+
+            <h2>4. 意見および連絡先情報</h2>
+            <p>アクセシビリティ要件（RD 1112/2018 第10.2.a条）に関するご連絡は、以下のような内容で行うことができます：</p>
+            <ul>
+                <li>本ウェブサイトによる準拠違反の可能性について報告する。</li>
+                <li>コンテンツへのアクセスのその他の困難さを伝える。</li>
+                <li>ウェブサイトのアクセシビリティに関するその他の問い合わせや改善提案を行う。</li>
+            </ul>
+            <p>ご連絡は、Eメールアドレス <strong>erikamorales@icamalaga.org</strong> または、本ウェブサイトで利用可能なコンタクトフォームを通じて行うことができます。ご連絡いただいた内容は、Erika Lizeth Morales Andradeが受信し、対応いたします。</p>
+        </div>
+    </section>
+</Layout>
+
+<style>
+  .page-header { background-color: var(--color-light-gray); padding: 3rem 0; text-align: center; border-bottom: 1px solid #ddd; }
+  .legal-content { max-width: 800px; }
+  .legal-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .legal-content p, .legal-content li { margin-bottom: 1rem; line-height: 1.7; }
+  .legal-content ul { list-style-position: inside; }
+</style>

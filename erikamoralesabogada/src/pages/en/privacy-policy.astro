@@ -2,25 +2,60 @@
 import Layout from '../../layouts/Layout.astro';
 import t from '../../i18n/en.json';
 ---
-<Layout title={t.legal.privacy} lang="en">
-    <div class="container section">
-        <h1>{t.legal.privacy}</h1>
-        <div class="legal-content">
-            <p><strong>Last Updated: September 22, 2025</strong></p>
-            
-            <h2>1. Introduction</h2>
-            <p>
-                Welcome to the Privacy Policy for Erika Morales, Lawyer. Your privacy is important to us...
-            </p>
-
-            <h2>2. Data We Collect</h2>
-            <p>
-                We collect information you provide directly to us through our contact form...
-            </p>
-            </div>
+<Layout
+    title="Privacy Policy | Erika Morales Lawyer"
+    description="Information on the processing of personal data, purpose, legal basis, rights of the data subject, and data protection policy according to GDPR."
+    lang="en"
+>
+    <div class="page-header">
+        <div class="container">
+            <h1>{t.legal.privacy}</h1>
+        </div>
     </div>
+
+    <section class="section">
+        <div class="container legal-content">
+            <p><strong>Last updated:</strong> September 25, 2025</p>
+
+            <h2>1. Data Controller</h2>
+            <ul>
+                <li><strong>Owner:</strong> Erika Lizeth Morales Andrade (hereinafter, "the Owner")</li>
+                <li><strong>Bar Association Member No.: 10.395</strong> of the Malaga Bar Association</li>
+                <li><strong>Professional Address:</strong> Calle Antequera 2, piso 2, 29649, Fuengirola, Málaga, España</li>
+                <li><strong>Email:</strong> erikamorales@icamalaga.org</li>
+                <li><strong>Phone:</strong> +34 635 04 19 99</li>
+            </ul>
+
+            <h2>2. Purpose of Data Processing</h2>
+            <p>The Owner will process the information you provide us through the contact form and other means for the following purposes:</p>
+            <ul>
+                <li>To manage and respond to inquiries, requests for information, or petitions received.</li>
+                <li>To manage the pre-contractual or contractual relationship should you request our professional services.</li>
+                <li>To send informational communications about legislative updates or law firm activities, only if you have given your express consent.</li>
+            </ul>
+
+            <h2>3. Legal Basis for Processing</h2>
+            <p>The legal basis for processing your data is the <strong>consent of the data subject</strong>, given by checking the corresponding acceptance box and submitting the form, or by voluntarily contacting the Owner. For the management of professional services, the basis will be the performance of a contract or pre-contractual measures.</p>
+
+            <h2>4. Data Retention Period</h2>
+            <p>The personal data provided will be kept for the time strictly necessary to fulfill the purpose for which it was collected and to determine any potential liabilities that may arise from said purpose. In the case of clients, data will be kept for the duration of the professional relationship and, subsequently, for the legally required periods.</p>
+
+            <h2>5. Recipients of the Data</h2>
+            <p>Your data will not be transferred to third parties, except by legal obligation. For the proper functioning of the website, certain technology service providers (hosting, etc.) may have access to your data, always under a data processing agreement that guarantees its confidentiality and security.</p>
+
+            <h2>6. Rights of the Data Subject</h2>
+            <p>You have the right to obtain confirmation as to whether we are processing your personal data. Likewise, you have the right to <strong>access</strong> your personal data, request the <strong>rectification</strong> of inaccurate data or, where appropriate, request its <strong>erasure</strong> when, among other reasons, the data is no longer necessary for the purposes for which it was collected.</p>
+            <p>In certain circumstances, you may request the <strong>restriction of processing</strong> of your data, in which case we will only keep it for the exercise or defense of claims. You may also object to the processing of your data and request the <strong>portability</strong> of the same.</p>
+            <p>You can exercise your rights by sending an email to erikamorales@icamalaga.org indicating your full name and attaching a copy of your ID.</p>
+            <p>If you believe your rights have not been adequately addressed, you have the right to file a complaint with the Spanish Data Protection Agency (AEPD).</p>
+        </div>
+    </section>
 </Layout>
+
 <style>
-    .legal-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
-    .legal-content p { margin-bottom: 1rem; }
+  .page-header { background-color: var(--color-light-gray); padding: 3rem 0; text-align: center; border-bottom: 1px solid #ddd; }
+  .legal-content { max-width: 800px; }
+  .legal-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .legal-content p, .legal-content li { margin-bottom: 1rem; line-height: 1.7; }
+  .legal-content ul { list-style-position: inside; }
 </style>

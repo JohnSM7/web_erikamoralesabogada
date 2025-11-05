@@ -2,17 +2,48 @@
 import Layout from '../../layouts/Layout.astro';
 import t from '../../i18n/fr.json';
 ---
-<Layout title={t.legal.cookies} lang="fr">
-    <div class="container section">
-        <h1>{t.legal.cookies}</h1>
-        <div class="legal-content">
-            <p>
-                Ce site web, comme la plupart des sites sur Internet, utilise des cookies pour améliorer l'expérience utilisateur...
-            </p>
+<Layout
+    title="Politique de Cookies | Erika Morales Avocate"
+    description="Informations sur l'utilisation des cookies sur notre site web. Découvrez quels types de cookies nous utilisons et comment vous pouvez les gérer ou les désactiver depuis votre navigateur."
+    lang="fr"
+>
+    <div class="page-header">
+        <div class="container">
+            <h1>{t.legal.cookies}</h1>
         </div>
     </div>
+
+    <section class="section">
+        <div class="container legal-content">
+            <p><strong>Dernière mise à jour :</strong> 25 septembre 2025</p>
+            
+            <h2>1. Qu'est-ce que les cookies ?</h2>
+            <p>Un cookie est un petit fichier texte qui est stocké sur votre navigateur lorsque vous visitez presque n'importe quelle page web. Son utilité est de permettre au site web de se souvenir de votre visite lorsque vous naviguez à nouveau sur cette page.</p>
+
+            <h2>2. Quels cookies ce site web utilise-t-il ?</h2>
+            <p>Ce site web utilise les cookies suivants :</p>
+            <ul>
+                <li><strong>Cookies techniques ou fonctionnels :</strong> Ce sont ceux qui sont essentiels au bon fonctionnement du site web. Ils permettent, par exemple, de contrôler le trafic et la communication des données, ou d'utiliser des éléments de sécurité pendant la navigation. Ce site web, étant développé avec une technologie moderne, peut utiliser des cookies techniques nécessaires à son fonctionnement de base, lesquels ne requièrent pas le consentement de l'utilisateur.</li>
+                <li><strong>Cookies d'analyse ou de mesure :</strong> Ce sont ceux qui, traités par nous ou par des tiers (comme Google Analytics), nous permettent de quantifier le nombre d'utilisateurs et ainsi d'effectuer la mesure et l'analyse statistique de l'utilisation qu'ils font du service proposé. Pour ce faire, leur navigation sur notre page web est analysée afin d'améliorer l'offre de produits ou services que nous proposons.</li>
+            </ul>
+
+            <h2>3. Comment désactiver ou supprimer les cookies ?</h2>
+            <p>Vous pouvez autoriser, bloquer ou supprimer les cookies installés sur votre ordinateur en configurant les options du navigateur installé sur votre ordinateur. Ci-dessous, nous vous proposons des liens où vous trouverez des informations sur la manière de configurer vos préférences dans les principaux navigateurs :</p>
+            <ul>
+                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+                <li><a href="https://support.mozilla.org/fr/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+                <li><a href="https://support.microsoft.com/fr-fr/windows/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener noreferrer">Internet Explorer / Edge</a></li>
+                <li><a href="https://support.apple.com/fr-fr/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+            </ul>
+            <p>La désactivation des cookies peut réduire les fonctionnalités de ce site web.</p>
+        </div>
+    </section>
 </Layout>
+
 <style>
-    .legal-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
-    .legal-content p { margin-bottom: 1rem; }
+  .page-header { background-color: var(--color-light-gray); padding: 3rem 0; text-align: center; border-bottom: 1px solid #ddd; }
+  .legal-content { max-width: 800px; }
+  .legal-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .legal-content p, .legal-content li { margin-bottom: 1rem; line-height: 1.7; }
+  .legal-content ul { list-style-position: inside; }
 </style>

@@ -2,17 +2,47 @@
 import Layout from '../../layouts/Layout.astro';
 import t from '../../i18n/en.json';
 ---
-<Layout title={t.legal.accessibility} lang="en">
-    <div class="container section">
-        <h1>{t.legal.accessibility}</h1>
-        <div class="legal-content">
-            <p>
-                Erika Morales has committed to making its website accessible in accordance with the relevant accessibility standards...
-            </p>
+<Layout
+    title="Accessibility Statement | Erika Morales Lawyer"
+    description="Commitment to web accessibility. Information about our website's compliance level with WCAG guidelines and how to contact us to report issues."
+    lang="en"
+>
+    <div class="page-header">
+        <div class="container">
+            <h1>{t.legal.accessibility}</h1>
         </div>
     </div>
+
+    <section class="section">
+        <div class="container legal-content">
+            <p>Erika Lizeth Morales Andrade is committed to making her website accessible, in accordance with Royal Decree 1112/2018, of September 7, on the accessibility of public sector websites and mobile applications, and the WCAG 2.1 guidelines.</p>
+            
+            <h2>1. Compliance Status</h2>
+            <p>This website has been developed using modern technologies and practices with the goal of being <strong>partially compliant</strong> with the aforementioned guidelines. We are continually working to improve the user experience for everyone, applying the relevant accessibility standards.</p>
+
+            <h2>2. Non-Accessible Content</h2>
+            <p>Despite our efforts, some specific content or functionality may not be fully accessible. We are working to address these limitations. If you encounter any difficulties, we appreciate you letting us know.</p>
+
+            <h2>3. Preparation of this accessibility statement</h2>
+            <p>This statement was prepared on September 25, 2025.</p>
+            <p>The method used to prepare the statement was a self-assessment carried out by the site's developer.</p>
+
+            <h2>4. Feedback and Contact Information</h2>
+            <p>You can make communications regarding accessibility requirements (Article 10.2.a of RD 1112/2018) such as:</p>
+            <ul>
+                <li>Report any possible non-compliance by this website.</li>
+                <li>Communicate other difficulties in accessing content.</li>
+                <li>Submit any other inquiry or suggestion for improvement regarding the website's accessibility.</li>
+            </ul>
+            <p>You can do so via the email address <strong>erikamorales@icamalaga.org</strong> or through the contact form available on this website. Communications will be received and handled by Erika Lizeth Morales Andrade.</p>
+        </div>
+    </section>
 </Layout>
+
 <style>
-    .legal-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
-    .legal-content p { margin-bottom: 1rem; }
+  .page-header { background-color: var(--color-light-gray); padding: 3rem 0; text-align: center; border-bottom: 1px solid #ddd; }
+  .legal-content { max-width: 800px; }
+  .legal-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .legal-content p, .legal-content li { margin-bottom: 1rem; line-height: 1.7; }
+  .legal-content ul { list-style-position: inside; }
 </style>

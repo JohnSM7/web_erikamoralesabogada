@@ -1,8 +1,16 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import InfoDespacho from '../../components/InfoDespacho.astro';
+import ContentImageSplit from '../../components/ContentImageSplit.astro';
 import t from '../../i18n/fr.json';
 ---
-<Layout title="Erika Morales | Avocate" description="Cabinet d'avocat spécialisé - Services juridiques professionnels" lang="fr">
+
+<Layout 
+    title="Avocate à Fuengirola et Costa del Sol | Erika Morales" 
+    description="Cabinet d'avocate spécialisée en droit des étrangers, droit civil, droit pénal et droit du travail à Fuengirola (Málaga) et Madrid. Conseil juridique et solutions concrètes." 
+    lang="fr"
+>
+    
     <div class="hero">
         <div class="container">
             <h1>{t.homepage.heroTitle}</h1>
@@ -10,25 +18,45 @@ import t from '../../i18n/fr.json';
             <a href={`/fr/${t.slugs.contact}`} class="cta-button">{t.homepage.heroCta}</a>
         </div>
     </div>
-    
-    <section class="section section-light">
+
+    <section class="quote-section section">
         <div class="container">
-            <h2>Bienvenue</h2>
-            <p>
-                J'offre un service juridique proche et professionnel. Mon objectif est de fournir la meilleure stratégie et défense pour chaque cas, en cherchant toujours la solution la plus favorable pour mes clients. Parcourez le site pour en savoir plus sur mes domaines de spécialisation.
-            </p>
+            <h2>{t.introQuote.title}</h2>
+            <blockquote>
+                "{t.introQuote.quote}"
+                <cite>– {t.introQuote.author}</cite>
+            </blockquote>
         </div>
     </section>
+    <InfoDespacho lang="fr" />
+
+    <ContentImageSplit 
+        title={t.officeInfo2.title}
+        imageSrc="/erika3.png"
+        imageAlt="Erika Morales">
+        <p set:html={t.officeInfo2.p2}></p>
+    </ContentImageSplit>
+
+    <ContentImageSplit 
+        title={t.officeInfo3.title}
+        imageSrc="/erika3.jpg"
+        imageAlt="Image conceptuelle sur l'expérience et le dévouement"
+        reverse={true}
+    >
+        <p>{t.officeInfo3.p3}</p>
+    </ContentImageSplit>
 
 </Layout>
 
 <style>
-    /* Estilos idénticos a los otros index.astro */
     .hero {
         background-color: var(--color-dark-blue);
         color: var(--color-white);
         padding: 6rem 0;
         text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/fondo.jpg");
+        background-size: cover;
+        background-position: center;
     }
     .hero h1 {
         color: var(--color-white);
@@ -38,5 +66,38 @@ import t from '../../i18n/fr.json';
         font-size: 1.2rem;
         max-width: 600px;
         margin: 0 auto 2rem auto;
+        background-color: rgba(13, 36, 71, 0.5);
+        padding: 0.5rem;
+        border-radius: 5px;
+    }
+
+    /* Estilos para la nueva sección de la cita */
+    .quote-section {
+        text-align: center;
+        color: var(--color-text);
+    }
+    .quote-section h2 {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+    .quote-section blockquote {
+        max-width: 750px;
+        margin: 0 auto;
+        font-family: var(--font-family-serif);
+        font-style: italic;
+        font-size: 1.3rem;
+        line-height: 1.6;
+        border-left: 4px solid var(--color-accent);
+        padding-left: 2rem;
+        text-align: left;
+    }
+    .quote-section cite {
+        display: block;
+        margin-top: 1rem;
+        font-style: normal;
+        font-family: var(--font-family-sans);
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--color-dark-blue);
     }
 </style>

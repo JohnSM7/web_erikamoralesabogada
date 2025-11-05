@@ -2,17 +2,49 @@
 import Layout from '../../layouts/Layout.astro';
 import t from '../../i18n/fr.json';
 ---
-<Layout title={t.legal.legal_notice} lang="fr">
-    <div class="container section">
-        <h1>{t.legal.legal_notice}</h1>
-        <div class="legal-content">
-            <p>
-                Conformément au devoir d'information contenu dans la réglementation applicable, les données suivantes sont reflétées ci-dessous...
-            </p>
+<Layout
+    title="Mentions Légales | Erika Morales Avocate"
+    description="Consultez les mentions légales du cabinet d'avocats d'Erika Morales. Informations sur le propriétaire du site web, la propriété intellectuelle et la législation applicable."
+    lang="fr"
+>
+    <div class="page-header">
+        <div class="container">
+            <h1>{t.legal.legal_notice}</h1>
         </div>
     </div>
+
+    <section class="section">
+        <div class="container legal-content">
+            <h2>1. Données d'Identification du Propriétaire</h2>
+            <p>Conformément à l'article 10 de la Loi 34/2002, du 11 juillet, sur les Services de la Société de l'Information et du Commerce Électronique (LSSI-CE), les données d'identification du propriétaire de ce site web sont exposées ci-dessous :</p>
+            <ul>
+                <li><strong>Propriétaire :</strong> Erika Lizeth Morales Andrade (ci-après, "le Propriétaire")</li>
+                <li><strong>Membre du Barreau N° : 10.395</strong> de l'Ordre des Avocats de Malaga</li>
+                <li><strong>Adresse Professionnelle :</strong> Calle Antequera 2, piso 2, 29649, Fuengirola, Málaga, Espagne</li>
+                <li><strong>Email :</strong> erikamorales@icamalaga.org</li>
+                <li><strong>Téléphone :</strong> +34 635 04 19 99</li>
+            </ul>
+
+            <h2>2. Objet et Acceptation</h2>
+            <p>Les présentes Mentions Légales régissent l'accès et l'utilisation du site web, dont l'objectif est de fournir des informations sur les services juridiques offerts par le Propriétaire. La navigation sur le site web attribue la condition d'utilisateur de celui-ci et implique l'acceptation pleine et sans réserve de toutes les dispositions incluses dans ces Mentions Légales.</p>
+
+            <h2>3. Propriété Intellectuelle et Industrielle</h2>
+            <p>Tous les droits de propriété intellectuelle et industrielle du site web et de ses contenus (textes, images, designs, logos, logiciels) appartiennent au Propriétaire ou, le cas échéant, à des tiers. L'utilisateur peut visualiser les éléments du portail et même les imprimer, les copier et les stocker sur le disque dur de son ordinateur ou sur tout autre support physique à condition que ce soit, uniquement et exclusivement, pour son usage personnel et privé.</p>
+
+            <h2>4. Exclusion de Responsabilité</h2>
+            <p>Le contenu de ce site web est de nature générale et a un but purement informatif, sans garantir pleinement l'accès à tous les contenus, ni leur exhaustivité, exactitude, validité ou actualité, ni leur adéquation ou utilité pour un objectif spécifique.</p>
+            <p>Le Propriétaire ne peut être tenu responsable des dommages et préjudices de toute nature qui pourraient être occasionnés, à titre d'exemple : erreurs ou omissions dans les contenus, manque de disponibilité du portail ou transmission de virus ou de programmes malveillants dans les contenus, bien qu'ayant adopté toutes les mesures technologiques nécessaires pour l'éviter.</p>
+
+            <h2>5. Loi Applicable et Juridiction</h2>
+            <p>Pour la résolution de toutes les controverses ou questions liées au présent site web ou aux activités qui y sont développées, la législation espagnole sera applicable, à laquelle les parties se soumettent expressément, les Cours et Tribunaux de Fuengirola étant compétents pour la résolution de tous les conflits dérivés ou liés à son utilisation.</p>
+        </div>
+    </section>
 </Layout>
+
 <style>
-    .legal-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
-    .legal-content p { margin-bottom: 1rem; }
+  .page-header { background-color: var(--color-light-gray); padding: 3rem 0; text-align: center; border-bottom: 1px solid #ddd; }
+  .legal-content { max-width: 800px; }
+  .legal-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .legal-content p, .legal-content li { margin-bottom: 1rem; line-height: 1.7; }
+  .legal-content ul { list-style-position: inside; }
 </style>

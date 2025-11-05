@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/ja.json';
+---
+<Layout
+    title="法的通知 | エリカ・モラレス弁護士"
+    description="エリカ・モラレス弁護士事務所の法的通知をご覧ください。ウェブサイトの所有者、知的財産権、適用法に関する情報。"
+    lang="ja"
+>
+    <div class="page-header">
+        <div class="container">
+            <h1>{t.legal.legal_notice}</h1>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container legal-content">
+            <h2>1. 所有者の識別データ</h2>
+            <p>情報社会サービスおよび電子商取引に関する2002年7月11日の法律34/2002（LSSI-CE）第10条に基づき、本ウェブサイト所有者の識別データを以下に示します：</p>
+            <ul>
+                <li><strong>所有者:</strong> Erika Lizeth Morales Andrade (以下、「所有者」)</li>
+                <li><strong>弁護士会登録番号: 10.395</strong> (マラガ弁護士会)</li>
+                <li><strong>事務所住所:</strong> Calle Antequera 2, piso 2, 29649, Fuengirola, Málaga, España</li>
+                <li><strong>Eメール:</strong> erikamorales@icamalaga.org</li>
+                <li><strong>電話番号:</strong> +34 635 04 19 99</li>
+            </ul>
+
+            <h2>2. 目的と受諾</h2>
+            <p>本法的通知は、所有者が提供する法律サービスに関する情報を提供することを目的とするウェブサイトへのアクセスおよびその利用を規制するものです。本ウェブサイトを閲覧することにより、ユーザーとしての地位が与えられ、本法的通知に含まれる各条項の完全かつ無条件の受諾を意味します。</p>
+
+            <h2>3. 知的財産権および工業所有権</h2>
+            <p>本ウェブサイトおよびそのコンテンツ（テキスト、画像、デザイン、ロゴ、ソフトウェア）に関するすべての知的財産権および工業所有権は、所有者または、場合によっては第三者に帰属します。ユーザーは、ポータルの要素を閲覧すること、さらにはそれらを印刷、コピーし、自身のコンピュータのハードドライブやその他の物理的媒体に保存することができますが、それは個人的かつ私的な使用のためだけに限定されます。</p>
+
+            <h2>4. 責任の免除</h2>
+            <p>本ウェブサイトのコンテンツは一般的な性質のものであり、純粋に情報提供を目的としています。すべてのコンテンツへの完全なアクセス、その網羅性、正確性、有効性、適時性、または特定目的への適合性や有用性を完全に保証するものではありません。</p>
+            <p>所有者は、コンテンツの誤りや欠落、ポータルの利用不能、またはコンテンツ内のウイルスや悪意のあるプログラムの送信（これらを防ぐために必要なすべての技術的措置を講じているにもかかわらず）など、例示として挙げられるいかなる性質の損害についても責任を負いません。</p>
+
+            <h2>5. 準拠法および管轄</h2>
+            <p>本ウェブサイトまたは本ウェブサイトで展開される活動に関連するすべての紛争または問題の解決については、スペインの法律が適用され、両当事者はこれに明示的に服するものとします。その使用に起因または関連するすべての紛争の解決については、フエンヒローラの裁判所が管轄権を有します。</p>
+        </div>
+    </section>
+</Layout>
+
+<style>
+  .page-header { background-color: var(--color-light-gray); padding: 3rem 0; text-align: center; border-bottom: 1px solid #ddd; }
+  .legal-content { max-width: 800px; }
+  .legal-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .legal-content p, .legal-content li { margin-bottom: 1rem; line-height: 1.7; }
+  .legal-content ul { list-style-position: inside; }
+</style>

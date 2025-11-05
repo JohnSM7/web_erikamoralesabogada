@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/ja.json';
+---
+<Layout
+    title="クッキーポリシー | エリカ・モラレス弁護士"
+    description="当サイトでのクッキーの使用に関する情報。使用しているクッキーの種類、およびブラウザでの管理・無効化の方法について説明します。"
+    lang="ja"
+>
+    <div class="page-header">
+        <div class="container">
+            <h1>{t.legal.cookies}</h1>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container legal-content">
+            <p><strong>最終更新日:</strong> 2025年9月25日</p>
+            
+            <h2>1. クッキーとは？</h2>
+            <p>クッキーとは、ほぼすべてのウェブページを訪問した際に、お使いのブラウザに保存される小さなテキストファイルです。その目的は、再度そのページを閲覧した際に、ウェブサイトがあなたの訪問を記憶できるようにすることです。</p>
+
+            <h2>2. 本ウェブサイトが使用するクッキー</h2>
+            <p>本ウェブサイトは以下のクッキーを使用しています：</p>
+            <ul>
+                <li><strong>技術的または機能的クッキー：</strong> これらはウェブサイトが正しく機能するために不可欠なものです。例えば、トラフィックやデータ通信の制御、またはナビゲーション中のセキュリティ要素の使用を可能にします。本ウェブサイトは最新技術で開発されているため、基本的な機能に必要な技術的クッキーを使用することがあり、これらはユーザーの同意を必要としません。</li>
+                <li><strong>分析または測定クッキー：</strong> これらは、当方または第三者（Google Analyticsなど）によって処理され、ユーザー数を定量化し、提供されるサービスの利用状況の測定および統計分析を行うことを可能にします。そのために、当ウェブページでのあなたのナビゲーションが分析され、私たちが提供する製品やサービスの向上に役立てられます。</li>
+            </ul>
+
+            <h2>3. クッキーを無効化または削除する方法</h2>
+            <p>お使いのコンピュータにインストールされているブラウザのオプションを設定することにより、インストールされたクッキーを許可、ブロック、または削除することができます。以下に、主要なブラウザで設定を行う方法に関する情報が記載されたリンクを提供します：</p>
+            <ul>
+                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+                <li><a href="https://support.mozilla.org/ja/kb/block-websites-storing-cookies-site-data-firefox" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+                <li><a href="https://support.microsoft.com/ja-jp/windows/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener noreferrer">Internet Explorer / Edge</a></li>
+                <li><a href="https://support.apple.com/ja-jp/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+            </ul>
+            <p>クッキーを無効にすると、本ウェブサイトの一部の機能が損なわれる可能性があります。</p>
+        </div>
+    </section>
+</Layout>
+
+<style>
+  .page-header { background-color: var(--color-light-gray); padding: 3rem 0; text-align: center; border-bottom: 1px solid #ddd; }
+  .legal-content { max-width: 800px; }
+  .legal-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .legal-content p, .legal-content li { margin-bottom: 1rem; line-height: 1.7; }
+  .legal-content ul { list-style-position: inside; }
+</style>

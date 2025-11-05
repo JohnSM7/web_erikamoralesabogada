@@ -1,11 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import t from '../../i18n/fr.json';
+import t from '../../i18n/ja.json';
 ---
 <Layout 
-    title="Contact | Erika Morales"
-    description="Contactez Erika Morales Avocate pour une consultation juridique confidentielle. Trouvez mon téléphone, email et adresse à Fuengirola, Málaga."
-    lang="fr"
+    title="お問い合わせ | エリカ・モラレス"
+    description="エリカ・モラレス弁護士との秘密厳守の法律相談をご希望の場合は、お問い合わせください。フエンヒローラ（マラガ）の電話番号、Eメール、住所はこちらです。"
+    lang="ja"
 >
   <div class="page-header">
     <div class="container">
@@ -35,17 +35,17 @@ import t from '../../i18n/fr.json';
           <textarea id="message" name="message" rows="6" required></textarea>
         </div>
 
-        <input type="hidden" name="_next" value="http://localhost:4321/fr/gracias"> 
-        <input type="hidden" name="_subject" value="Nouveau Message du Site Web - Erika Morales Avocate">
+        <input type="hidden" name="_next" value="http://localhost:4321/ja/gracias">
+        <input type="hidden" name="_subject" value="ウェブサイトからの新規メッセージ - エリカ・モラレス弁護士">
         <input type="text" name="_honey" style="display:none">
 
         <button type="submit" class="cta-button">{t.contactpage.formSend}</button>
       </form>
       <div class="contact-info">
         <h3>{t.contactpage.infoTitle}</h3>
-        <p><strong>Adresse :</strong><br>{t.contactpage.infoAddress}</p>
-        <p><strong>Téléphone :</strong><br>{t.contactpage.infoPhone}</p>
-        <p><strong>Email :</strong><br>erikamorales@icamalaga.org</p>
+        <p><strong>住所:</strong><br>{t.contactpage.infoAddress}</p>
+        <p><strong>電話番号:</strong><br>{t.contactpage.infoPhone}</p>
+        <p><strong>Eメール:</strong><br>erikamorales@icamalaga.org</p>
       </div>
     </div>
   </section>
@@ -63,7 +63,7 @@ import t from '../../i18n/fr.json';
   }
   .contact-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Deux colonnes sur bureau */
+    grid-template-columns: 2fr 1fr; /* デスクトップでは2列 */
     gap: 3rem;
   }
   .form-group {
@@ -92,12 +92,12 @@ import t from '../../i18n/fr.json';
     margin-bottom: 1rem;
   }
 
-  /* --- CORRECTION POUR MOBILES --- */
+  /* --- モバイル向け修正 --- */
   @media (max-width: 768px) {
     .contact-grid {
-      /* On passe à une seule colonne */
+      /* 1列に変更 */
       grid-template-columns: 1fr;
-      /* On réduit l'espace entre les éléments */
+      /* 要素間のスペースを縮小 */
       gap: 2.5rem;
     }
   }
