@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import t from '../../i18n/ja.json';
+---
+<Layout
+    title={t.thankspage.title}
+    description="エリカ・モラレス弁護士にご連絡いただきありがとうございます。"
+    lang="ja"
+>
+    <div class="thank-you-container">
+        <h1>{t.thankspage.title}</h1>
+        <p>{t.thankspage.subtitle}</p>
+        <a href="/ja/" class="cta-button">{t.thankspage.cta}</a>
+    </div>
+</Layout>
+
+<style>
+    .thank-you-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 50vh;
+        padding: 4rem 1.5rem;
+    }
+    .thank-you-container h1 {
+        margin-bottom: 1rem;
+        color: var(--color-dark-blue);
+    }
+    .thank-you-container p {
+        font-size: 1.2rem;
+        max-width: 500px;
+        margin-bottom: 2.5rem;
+        color: var(--color-text);
+    }
+</style>
