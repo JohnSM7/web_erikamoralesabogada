@@ -1,78 +1,189 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import WhatsAppButton from '../components/WhatsAppButton.astro';
-import '../styles/global.css';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import WhatsAppButton from "../components/WhatsAppButton.astro";
+import "../styles/global.css";
 
+import es from "../i18n/es.json";
+import en from "../i18n/en.json";
+import fr from "../i18n/fr.json";
+import ja from "../i18n/ja.json";
 
 interface Props {
-	title: string;
-	description: string;
-    lang: 'es' | 'en' | 'fr' | 'ja';
+    title: string;
+    description: string;
+    lang: "es" | "en" | "fr" | "ja";
 }
 const { title, description, lang } = Astro.props;
 
+const siteBase = "https://erikamoralesabogada.com";
+const canonicalURL = new URL(Astro.url.pathname, siteBase);
+const socialImage = new URL("/fondo.jpg", siteBase).href;
+
+// Logic for hreflang generation
+const translations = { es, en, fr, ja };
+const currentLangData = translations[lang];
+const currentPath = Astro.url.pathname;
+
+// Remove lang prefix (e.g. /es) and trailing slash / leading slash from the slug
+const pathWithoutLang = currentPath
+    .replace(new RegExp(`^/${lang}`), "")
+    .replace(/\/$/, "");
+const cleanSlug = pathWithoutLang.replace(/^\//, "");
+
+let routeKey: string | null = null;
+let isLegal = false;
+
+if (cleanSlug === "") {
+    routeKey = "home";
+} else {
+    // Search in slugs
+    const foundSlug = Object.entries(currentLangData.slugs).find(
+        ([k, v]) => v === cleanSlug,
+    );
+    if (foundSlug) {
+        routeKey = foundSlug[0];
+    } else {
+        // Search in legal slugs
+        const foundLegal = Object.entries(currentLangData.legal).find(
+            ([k, v]) => k.endsWith("_slug") && v === cleanSlug,
+        );
+        if (foundLegal) {
+            routeKey = foundLegal[0];
+            isLegal = true;
+        }
+    }
+}
+
+const alternates = ["es", "en", "fr", "ja"]
+    .map((l) => {
+        // Generate alternate links for all languages, including self (recommended by Google)
+        let slug = "";
+        if (routeKey === "home") {
+            slug = "";
+        } else if (routeKey) {
+            // @ts-ignore
+            const t = translations[l];
+            if (isLegal) {
+                // @ts-ignore
+                slug = t.legal[routeKey];
+            } else {
+                // @ts-ignore
+                slug = t.slugs[routeKey];
+            }
+        } else {
+            return null;
+        }
+
+        // Construct URL: /lang/slug or /lang/
+        const hrefPath = slug ? `${l}/${slug}` : `${l}/`;
+        return {
+            lang: l,
+            href: `${siteBase}/${hrefPath}`,
+        };
+    })
+    .filter((a) => a !== null);
 ---
 
 <!doctype html>
-<html lang={lang}> {/* Usamos la prop 'lang' para la accesibilidad y el SEO */}
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Asesoramiento legal profesional y personalizado por Erika Morales." />
-		<meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/png" href="/logo_erika.png" />
-		 <meta name="description" content={description} />
+<html lang={lang}>
+    <head>
+        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="canonical" href={Astro.url.href} /> 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="/logo_erika.png" />
+
+        <!-- SEO General -->
         <title>{title}</title>
-		<script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Attorney",
-    "name": "Erika Morales Abogada",
-    "description": "Despacho de abogada especialista en extranjería, derecho civil, penal y laboral en Fuengirola (Málaga) y Madrid.",
-    "url": Astro.url.href,
-    "logo": "https://erikamoralesabogada.com/logo-oscuro.png", // URL completa a tu logo oscuro
-    "image": "https://erikamoralesabogada.com/fondo.jpg", // URL a una imagen representativa
-    "telephone": "+34635041999", // CAMBIAR POR TU TELÉFONO REAL
-    "hasMap": "https://maps.google.com/?cid=TUIDENGOOGLEMAPS", // CAMBIAR POR EL ENLACE A TU UBICACIÓN EN MAPS
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Calle Ficticia 123, Oficina 4",
-        "addressLocality": "Fuengirola",
-        "postalCode": "29640",
-        "addressRegion": "Málaga",
-        "addressCountry": "ES"
-    },
-    "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "36.5445", // CAMBIAR por la latitud de tu despacho
-        "longitude": "-4.6220" // CAMBIAR por la longitud de tu despacho
-    },
-    "openingHoursSpecification": [
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalURL} />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={socialImage} />
+        <meta property="og:site_name" content="Erika Morales Abogada" />
+        <meta property="og:locale" content={lang} />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={canonicalURL} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={socialImage} />
+
+        <!-- Hreflang Tags -->
         {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "09:00",
-            "closes": "18:00"
+            alternates.map((alt) => (
+                <link rel="alternate" hreflang={alt!.lang} href={alt!.href} />
+            ))
         }
-    ]
-})} />
+        {
+            /* Fallback x-default to es/ home if we are at home, or generally pointing to es version */
+        }
+        {
+            /* We can skip x-default if we list all regions, but pointing to ES is safe */
+        }
 
-	</head>
-	<body>
-		{/* Aquí colocamos los componentes que se repiten en todas las páginas */}
-		<Header currentLang={lang} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+            rel="stylesheet"
+        />
 
-		<main>
-			{/* El <slot /> es el espacio donde Astro inyectará
-			    el contenido específico de cada página (ej: el contenido de 'index.astro') */}
-			<slot />
-		</main>
-		
-		<Footer currentLang={lang} />
-		<WhatsAppButton />
-	</body>
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Attorney",
+                name: "Erika Morales Abogada",
+                description: es.homepage.heroSubtitle,
+                url: siteBase,
+                logo: `${siteBase}/logo_erika.png`,
+                image: `${siteBase}/fondo.jpg`,
+                telephone: es.contactpage.infoPhone.replace(/\s/g, ""),
+                hasMap: "https://maps.google.com/?cid=TUIDENGOOGLEMAPS",
+                address: {
+                    "@type": "PostalAddress",
+                    streetAddress: "Calle Antequera 2, piso 2",
+                    addressLocality: "Fuengirola",
+                    postalCode: "29649",
+                    addressRegion: "Málaga",
+                    addressCountry: "ES",
+                },
+                geo: {
+                    "@type": "GeoCoordinates",
+                    latitude: "36.5414",
+                    longitude: "-4.6234",
+                },
+                priceRange: "$$",
+                openingHoursSpecification: [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        dayOfWeek: [
+                            "Monday",
+                            "Tuesday",
+                            "Wednesday",
+                            "Thursday",
+                            "Friday",
+                        ],
+                        opens: "09:00",
+                        closes: "18:00",
+                    },
+                ],
+            })}
+        />
+    </head>
+    <body>
+        <Header currentLang={lang} />
+
+        <main>
+            <slot />
+        </main>
+
+        <Footer currentLang={lang} />
+        <WhatsAppButton />
+    </body>
 </html>
