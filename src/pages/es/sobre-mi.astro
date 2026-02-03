@@ -1,37 +1,37 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import ContentImageSplit from '../../components/ContentImageSplit.astro'; 
-import t from '../../i18n/es.json';
+import Layout from "../../layouts/Layout.astro";
+import ContentImageSplit from "../../components/ContentImageSplit.astro";
+import t from "../../i18n/es.json";
 ---
 
-<Layout title="Sobre Mí | Erika Morales" 
-description="Conoce a Erika Morales, abogada con sólida trayectoria en diversas áreas del derecho. Mi filosofía se basa en la confianza, transparencia y dedicación."
-lang="es">
-
+<Layout
+  title="Sobre Mí | Erika Morales"
+  description="Conoce a Erika Morales, abogada con sólida trayectoria en diversas áreas del derecho. Mi filosofía se basa en la confianza, transparencia y dedicación."
+  lang="es"
+>
   <div class="page-header">
     <div class="container">
       <h1>{t.aboutpage.title}</h1>
-      <p class="intro">{t.aboutpage.intro}</p>
+      <p class="intro" set:html={t.aboutpage.intro} />
     </div>
   </div>
 
-  <ContentImageSplit 
+  <ContentImageSplit
     title={t.aboutpage.philosophyTitle}
     imageSrc="/erika1_1.jpg"
     imageAlt="Imagen conceptual sobre la filosofía del despacho"
   >
-    <p>{t.aboutpage.philosophyText}</p>
+    <p set:html={t.aboutpage.philosophyText} />
   </ContentImageSplit>
 
-  <ContentImageSplit 
+  <ContentImageSplit
     title={t.aboutpage.experienceTitle}
     imageSrc="/erika2.jpg"
     imageAlt="Imagen conceptual sobre experiencia y dedicación"
     reverse={true}
   >
-    <p>{t.aboutpage.experienceText}</p>
+    <p set:html={t.aboutpage.experienceText} />
   </ContentImageSplit>
-
 </Layout>
 
 <style>

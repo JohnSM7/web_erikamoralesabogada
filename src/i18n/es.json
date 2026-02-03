@@ -11,39 +11,39 @@
     "contact": "Contacto"
   },
   "homepage": {
-    "heroTitle": "Defensa Legal, Soluciones Reales.",
-    "heroSubtitle": "Compromiso, experiencia y dedicación para proteger tus derechos e intereses.",
-    "heroCta": "Solicitar Consulta"
+    "heroTitle": "Abogada Especialista en Extranjería y Derecho Civil en Fuengirola",
+    "heroSubtitle": "Compromiso, experiencia y dedicación para proteger tus derechos e intereses en la <strong>Costa del Sol</strong>.",
+    "heroCta": "Solicitar Consulta Gratuita"
   },
   "aboutpage": {
-    "title": "Compromiso con la Justicia y la Excelencia",
-    "intro": "Érika Lizeth Morales Andrade: Nacida en Quito, Ecuador. Graduada en derecho en la célebre Universidad Complutense de Madrid y con Máster de acceso a la abogacía en la prestigiosa Universidad Francisco de Vitoria. Miembro de la Comisión de cultura y formación del Ilustre Colegio de abogados de Málaga en la Delegación de Fuengirola. Ha sido abogada de la oficina de vivienda del Ayuntamiento de Navalcarnero de la Comunidad de Madrid. Así como abogada colaboradora de un importante despacho a nivel estatal en el sector de derecho bancario.",
-    "philosophyTitle": "Mi Filosofía",
-    "philosophyText": "Creo en una abogacía basada en la confianza, la transparencia y la comunicación constante. Cada caso es único y merece una atención meticulosa. Me comprometo a guiarle a través de cada paso del proceso legal, explicando sus opciones de manera clara para que pueda tomar decisiones informadas.",
-    "experienceTitle": "Experiencia y Dedicación",
-    "experienceText": "Con una sólida trayectoria en diversas áreas del derecho, he representado a clientes en negociaciones complejas y litigios exigentes. Mi dedicación es asegurar el mejor resultado posible para usted, su familia o su negocio.",
-    "cta": "Hablemos de su caso"
+    "title": "Compromiso con la Justicia y la Excelencia en Fuengirola",
+    "intro": "<strong>Érika Lizeth Morales Andrade</strong>: Abogada colegiada experta en ofrecer soluciones legales efectivas. Nacida en Quito, Ecuador, y licenciada por la <strong>Universidad Complutense de Madrid</strong>, cuento con un Máster de Acceso a la Abogacía por la Universidad Francisco de Vitoria. Miembro activo de la Comisión de Cultura del <strong>Ilustre Colegio de Abogados de Málaga</strong>, Delegación de Fuengirola.",
+    "philosophyTitle": "Mi Filosofía Legal",
+    "philosophyText": "Creo firmemente en una abogacía humana, basada en la <strong>confianza</strong> y la <strong>transparencia</strong>. Cada cliente recibe un trato personalizado y una estrategia legal a medida. Mi objetivo es que entiendas cada paso del proceso, desde la primera consulta hasta la resolución favorable de tu caso en <strong>Fuengirola</strong> o <strong>Madrid</strong>.",
+    "experienceTitle": "Experiencia y Dedicación Contrastada",
+    "experienceText": "Con una sólida trayectoria en derecho bancario y administración local (Ayuntamiento de Navalcarnero), hoy lidero mi propio despacho enfocado en <strong>Derecho de Extranjería</strong> y Civil. He resuelto con éxito numerosos expedientes de nacionalidad y regularización para clientes internacionales en la <strong>Costa del Sol</strong>.",
+    "cta": "Hablemos de su caso hoy"
   },
   "servicespage": {
-    "title": "Áreas de Práctica",
-    "subtitle": "Ofrezco una representación legal experta en una variedad de disciplinas para individuos y empresas.",
-    "civilTitle": "Derecho Civil",
-    "civilText": "Defensa y representación en casos de contratos, reclamaciones de deudas, responsabilidad civil, arrendamientos y propiedad.",
-    "familyTitle": "Derecho de Familia",
-    "familyText": "Asesoramiento en procesos de divorcio, custodia de hijos, pensiones alimenticias, herencias y planificación sucesoria.",
+    "title": "Áreas de Práctica Legal",
+    "subtitle": "Servicios jurídicos integrales para particulares y empresas en Fuengirola y Málaga provincia.",
+    "civilTitle": "Derecho Civil y Contratos",
+    "civilText": "Expertos en <strong>reclamaciones de cantidad</strong>, redacción y revisión de contratos de alquiler y compraventa, <strong>desahucios</strong>, y responsabilidad civil. Protegemos tu patrimonio.",
+    "familyTitle": "Derecho de Familia y Sucesiones",
+    "familyText": "Asesoramiento empático en <strong>divorcios</strong> (mutuo acuerdo y contencioso), medidas de custodia, pensiones de alimentos, y gestión integral de <strong>herencias y testamentos</strong>.",
     "penalTitle": "Derecho Penal",
-    "penalText": "Asistencia y defensa en todas las fases del proceso penal, desde la detención hasta el juicio, para todo tipo de delitos.",
-    "immigrationTitle": "Derecho de Extranjería",
-    "immigrationText": "Gestión de permisos de residencia, solicitudes de nacionalidad, reagrupación familiar y recursos contra denegaciones."
+    "penalText": "Defensa letrada rigurosa en <strong>juicios rápidos</strong>, delitos leves, alcoholemias, y violencia de género. Asistencia al detenido 24h en comisaría y juzgados.",
+    "immigrationTitle": "Abogada de Extranjería",
+    "immigrationText": "Especialista en <strong>Nacionalidad Española</strong> (por residencia, opción, memoria democrática), <strong>Arraigo</strong> (social, laboral, familiar), Reagrupación Familiar, Tarjeta Comunitaria y <strong>Visados de Oro</strong>."
   },
   "contactpage": {
-    "title": "Contacto",
-    "subtitle": "Estoy aquí para ayudar. Envíe su consulta a través del formulario o utilice los datos de contacto directo. La primera consulta es confidencial.",
+    "title": "Contacta con tu Abogada en Fuengirola",
+    "subtitle": "¿Necesitas asesoramiento legal urgente? Rellena el formulario o llámanos. Respondemos en menos de 24 horas.",
     "formName": "Nombre Completo",
     "formEmail": "Correo Electrónico",
-    "formMessage": "Su Mensaje",
-    "formSend": "Enviar Consulta",
-    "infoTitle": "Información de Contacto",
+    "formMessage": "Cuéntanos tu caso",
+    "formSend": "Enviar Consulta Legal",
+    "infoTitle": "Dónde Encontrarnos",
     "infoAddress": "Calle Antequera 2, piso 2, 29649, Fuengirola, Málaga, España",
     "infoPhone": "+34 635 04 19 99"
   },
@@ -60,26 +60,23 @@
     "accessibility_slug": "accesibilidad",
     "privacy_slug": "politica-privacidad"
   },
-    "introQuote": {
+  "introQuote": {
     "title": "Despacho Multidisciplinar",
     "quote": "El Derecho consiste en tres reglas o principios básicos: vivir honestamente, no dañar a los demás y dar a cada uno lo suyo. Es el arte de lo bueno y lo equitativo.",
     "author": "Marco Tulio Cicerón (106 a.C. – 43 a.C.)"
   },
-    "officeInfo": {
-      "title": "Nuestro Despacho",
-      "p1": "Somos un despacho multidisciplinar en crecimiento, especialista en extranjería y dedicado al derecho administrativo, civil, penal, laboral y de seguridad social. Nuestro objetivo es ofrecer un servicio integral y personalizado, adaptado a las necesidades de cada cliente. Asesoramos y gestionamos todo tipo de trámites legales, así como la solicitud de ayudas y subvenciones, garantizando siempre un trato cercano, profesional y eficaz."
-    },
-        "officeInfo2": {
-      "title": "Colaboradores y Partners de Confianza",
-      "p2": "En nuestra sede principal de Fuengirola colaboramos con la asesoría <a href=\"https://asesoriaperez.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Pérez y Porras</a> y con la notaría de <a href=\"https://notariapolseijas.es/\" target=\"_blank\" rel=\"noopener noreferrer\">Pablo Pol Seijas</a>, ambas de plena confianza. Además trabajamos con varias corredurías de seguros en toda España, como <a href=\"https://fuengirolabrokers.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Fuengirola Brokers</a>, entre otras."
-    },
-        "officeInfo3": {
-      "title": "Servicio Multilingüe para Nuestros Clientes",
-      "p3": "Contamos con servicio de traducción de inglés, francés y otros muchos idiomas, ofreciendo apoyo lingüístico tanto para documentos oficiales como para comunicaciones con clientes o proveedores internacionales."
-    },
-    
-
-
+  "officeInfo": {
+    "title": "Nuestro Despacho",
+    "p1": "Somos un despacho multidisciplinar en crecimiento, especialista en extranjería y dedicado al derecho administrativo, civil, penal, laboral y de seguridad social. Nuestro objetivo es ofrecer un servicio integral y personalizado, adaptado a las necesidades de cada cliente. Asesoramos y gestionamos todo tipo de trámites legales, así como la solicitud de ayudas y subvenciones, garantizando siempre un trato cercano, profesional y eficaz."
+  },
+  "officeInfo2": {
+    "title": "Colaboradores y Partners de Confianza",
+    "p2": "En nuestra sede principal de Fuengirola colaboramos con la asesoría <a href=\"https://asesoriaperez.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Pérez y Porras</a> y con la notaría de <a href=\"https://notariapolseijas.es/\" target=\"_blank\" rel=\"noopener noreferrer\">Pablo Pol Seijas</a>, ambas de plena confianza. Además trabajamos con varias corredurías de seguros en toda España, como <a href=\"https://fuengirolabrokers.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Fuengirola Brokers</a>, entre otras."
+  },
+  "officeInfo3": {
+    "title": "Servicio Multilingüe para Nuestros Clientes",
+    "p3": "Contamos con servicio de traducción de inglés, francés y otros muchos idiomas, ofreciendo apoyo lingüístico tanto para documentos oficiales como para comunicaciones con clientes o proveedores internacionales."
+  },
   "thankspage": {
     "title": "¡Mensaje Enviado!",
     "subtitle": "Gracias por contactar. He recibido tu consulta y te responderé a la mayor brevedad posible.",

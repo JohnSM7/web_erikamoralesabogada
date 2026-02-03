@@ -1,11 +1,12 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import t from '../../i18n/ja.json';
+import Layout from "../../layouts/Layout.astro";
+import t from "../../i18n/ja.json";
 ---
+
 <Layout
-    title="取扱分野 | フエンヒローラの弁護士 エリカ・モラレス"
-    description="コスタ・デル・ソルでの外国人法、民法、家族法、刑法、労働法を専門としています。専門的な法的アドバイスと代理業務を提供します。"
-    lang="ja"
+  title="取扱分野 | フエンヒローラの弁護士 エリカ・モラレス"
+  description="コスタ・デル・ソルでの外国人法、民法、家族法、刑法、労働法を専門としています。専門的な法的アドバイスと代理業務を提供します。"
+  lang="ja"
 >
   <div class="page-header">
     <div class="container">
@@ -16,27 +17,25 @@ import t from '../../i18n/ja.json';
 
   <section class="section">
     <div class="container services-grid">
-      
       <div class="service-card">
         <h3>{t.servicespage.civilTitle}</h3>
-        <p>{t.servicespage.civilText}</p>
+        <p set:html={t.servicespage.civilText} />
       </div>
 
       <div class="service-card">
         <h3>{t.servicespage.familyTitle}</h3>
-        <p>{t.servicespage.familyText}</p>
+        <p set:html={t.servicespage.familyText} />
       </div>
 
       <div class="service-card">
         <h3>{t.servicespage.penalTitle}</h3>
-        <p>{t.servicespage.penalText}</p>
+        <p set:html={t.servicespage.penalText} />
       </div>
 
       <div class="service-card">
         <h3>{t.servicespage.immigrationTitle}</h3>
-        <p>{t.servicespage.immigrationText}</p>
+        <p set:html={t.servicespage.immigrationText} />
       </div>
-
     </div>
   </section>
 </Layout>
@@ -65,7 +64,7 @@ import t from '../../i18n/ja.json';
   }
   .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     border-color: var(--color-accent);
   }
   .service-card h3 {

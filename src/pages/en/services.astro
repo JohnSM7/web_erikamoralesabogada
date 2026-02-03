@@ -1,11 +1,12 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import t from '../../i18n/en.json';
+import Layout from "../../layouts/Layout.astro";
+import t from "../../i18n/en.json";
 ---
+
 <Layout
-title="Practice Areas | Erika Morales Lawyer in Fuengirola"
-description="Specialist in immigration, civil, family, criminal, and labor law on the Costa del Sol. I offer expert legal advice and representation."    
-lang="en"
+  title="Practice Areas | Erika Morales Lawyer in Fuengirola"
+  description="Specialist in immigration, civil, family, criminal, and labor law on the Costa del Sol. I offer expert legal advice and representation."
+  lang="en"
 >
   <div class="page-header">
     <div class="container">
@@ -16,27 +17,25 @@ lang="en"
 
   <section class="section">
     <div class="container services-grid">
-      
       <div class="service-card">
         <h3>{t.servicespage.civilTitle}</h3>
-        <p>{t.servicespage.civilText}</p>
+        <p set:html={t.servicespage.civilText} />
       </div>
 
       <div class="service-card">
         <h3>{t.servicespage.familyTitle}</h3>
-        <p>{t.servicespage.familyText}</p>
+        <p set:html={t.servicespage.familyText} />
       </div>
 
       <div class="service-card">
         <h3>{t.servicespage.penalTitle}</h3>
-        <p>{t.servicespage.penalText}</p>
+        <p set:html={t.servicespage.penalText} />
       </div>
 
       <div class="service-card">
         <h3>{t.servicespage.immigrationTitle}</h3>
-        <p>{t.servicespage.immigrationText}</p>
+        <p set:html={t.servicespage.immigrationText} />
       </div>
-
     </div>
   </section>
 </Layout>
@@ -65,7 +64,7 @@ lang="en"
   }
   .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     border-color: var(--color-accent);
   }
   .service-card h3 {
@@ -77,8 +76,8 @@ lang="en"
   /* --- CORRECCIÓN PARA MÓVILES --- */
   @media (max-width: 768px) {
     .services-grid {
-        /* Cambiamos la rejilla a una sola columna */
-        grid-template-columns: 1fr;
+      /* Cambiamos la rejilla a una sola columna */
+      grid-template-columns: 1fr;
     }
   }
 </style>

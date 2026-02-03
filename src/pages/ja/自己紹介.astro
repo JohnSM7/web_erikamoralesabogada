@@ -1,38 +1,38 @@
 ---
 // src/pages/ja/sobre-mi.astro (VERSIÓN JAPONÉS)
-import Layout from '../../layouts/Layout.astro';
-import ContentImageSplit from '../../components/ContentImageSplit.astro'; 
-import t from '../../i18n/ja.json';
+import Layout from "../../layouts/Layout.astro";
+import ContentImageSplit from "../../components/ContentImageSplit.astro";
+import t from "../../i18n/ja.json";
 ---
 
-<Layout title="私について | エリカ・モラレス" 
-description="エリカ・モラレス弁護士の紹介。多様な法分野での確かな経験。私の理念は信頼、透明性、そして献身に基づいています。"
-lang="ja">
-
+<Layout
+  title="私について | エリカ・モラレス"
+  description="エリカ・モラレス弁護士の紹介。多様な法分野での確かな経験。私の理念は信頼、透明性、そして献身に基づいています。"
+  lang="ja"
+>
   <div class="page-header">
     <div class="container">
       <h1>{t.aboutpage.title}</h1>
-      <p class="intro">{t.aboutpage.intro}</p>
+      <p class="intro" set:html={t.aboutpage.intro} />
     </div>
   </div>
 
-  <ContentImageSplit 
+  <ContentImageSplit
     title={t.aboutpage.philosophyTitle}
     imageSrc="/erika1_1.jpg"
     imageAlt="事務所の理念に関するコンセプト画像"
   >
-    <p>{t.aboutpage.philosophyText}</p>
+    <p set:html={t.aboutpage.philosophyText} />
   </ContentImageSplit>
 
-  <ContentImageSplit 
+  <ContentImageSplit
     title={t.aboutpage.experienceTitle}
     imageSrc="/erika2.jpg"
     imageAlt="経験と献身についてのコンセプト画像"
     reverse={true}
   >
-    <p>{t.aboutpage.experienceText}</p>
+    <p set:html={t.aboutpage.experienceText} />
   </ContentImageSplit>
-
 </Layout>
 
 <style>

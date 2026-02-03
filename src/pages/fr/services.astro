@@ -1,11 +1,12 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import t from '../../i18n/fr.json';
+import Layout from "../../layouts/Layout.astro";
+import t from "../../i18n/fr.json";
 ---
+
 <Layout
-    title="Domaines de Pratique | Erika Morales Avocate à Fuengirola"
-    description="Spécialiste en droit des étrangers, droit civil, de la famille, droit pénal et droit du travail sur la Costa del Sol. J'offre des conseils et une représentation juridique experte."
-    lang="fr"
+  title="Domaines de Pratique | Erika Morales Avocate à Fuengirola"
+  description="Spécialiste en droit des étrangers, droit civil, de la famille, droit pénal et droit du travail sur la Costa del Sol. J'offre des conseils et une représentation juridique experte."
+  lang="fr"
 >
   <div class="page-header">
     <div class="container">
@@ -16,27 +17,25 @@ import t from '../../i18n/fr.json';
 
   <section class="section">
     <div class="container services-grid">
-      
       <div class="service-card">
         <h3>{t.servicespage.civilTitle}</h3>
-        <p>{t.servicespage.civilText}</p>
+        <p set:html={t.servicespage.civilText} />
       </div>
 
       <div class="service-card">
         <h3>{t.servicespage.familyTitle}</h3>
-        <p>{t.servicespage.familyText}</p>
+        <p set:html={t.servicespage.familyText} />
       </div>
 
       <div class="service-card">
         <h3>{t.servicespage.penalTitle}</h3>
-        <p>{t.servicespage.penalText}</p>
+        <p set:html={t.servicespage.penalText} />
       </div>
 
       <div class="service-card">
         <h3>{t.servicespage.immigrationTitle}</h3>
-        <p>{t.servicespage.immigrationText}</p>
+        <p set:html={t.servicespage.immigrationText} />
       </div>
-
     </div>
   </section>
 </Layout>
@@ -65,7 +64,7 @@ import t from '../../i18n/fr.json';
   }
   .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     border-color: var(--color-accent);
   }
   .service-card h3 {
