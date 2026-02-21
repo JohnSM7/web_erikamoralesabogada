@@ -1,15 +1,14 @@
 ---
 // --- 1. LÓGICA DEL COMPONENTE ---
-import es from '../i18n/es.json';
-import en from '../i18n/en.json';
-import fr from '../i18n/fr.json';
-import ja from '../i18n/ja.json';
+import es from "../i18n/es.json";
+import en from "../i18n/en.json";
+import fr from "../i18n/fr.json";
+import ja from "../i18n/ja.json";
 
 const translations = { es, en, fr, ja };
 
-
 interface Props {
-	currentLang: 'es' | 'en' | 'fr' | 'ja';
+    currentLang: "es" | "en" | "fr" | "ja";
 }
 const { currentLang } = Astro.props;
 
@@ -21,22 +20,40 @@ const year = new Date().getFullYear();
 
 <footer>
     <div class="container footer-container">
-        
         <a href={`/${currentLang}/`} class="footer-logo">
-            <img src="/logo_erika.png" alt="Logo de Erika Morales Abogada">
+            <img src="/logo_erika.png" alt="Logo de Erika Morales Abogada" />
         </a>
 
         <div class="legal-links">
-            <a href={`/${currentLang}/${t.legal.cookies_slug}`}>{t.legal.cookies}</a>
-            <a href={`/${currentLang}/${t.legal.legal_notice_slug}`}>{t.legal.legal_notice}</a>
-            <a href={`/${currentLang}/${t.legal.accessibility_slug}`}>{t.legal.accessibility}</a>
-            <a href={`/${currentLang}/${t.legal.privacy_slug}`}>{t.legal.privacy}</a>
+            <a href={`/${currentLang}/${t.legal.cookies_slug}`}
+                >{t.legal.cookies}</a
+            >
+            <a href={`/${currentLang}/${t.legal.legal_notice_slug}`}
+                >{t.legal.legal_notice}</a
+            >
+            <a href={`/${currentLang}/${t.legal.accessibility_slug}`}
+                >{t.legal.accessibility}</a
+            >
+            <a href={`/${currentLang}/${t.legal.privacy_slug}`}
+                >{t.legal.privacy}</a
+            >
         </div>
 
-        <div class="copyright">
-            <p>&copy; {year} Erika Morales. {t.footer.rights}</p>
-        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>&copy; {year} Erika Morales. {t.footer.rights}</p>
+            </div>
 
+            <div class="powered-by">
+                <p>
+                    Powered by <a
+                        href="https://www.tanesolutions.com"
+                        target="_blank"
+                        rel="noopener noreferrer">Tane Solutions</a
+                    >
+                </p>
+            </div>
+        </div>
     </div>
 </footer>
 
@@ -46,7 +63,7 @@ const year = new Date().getFullYear();
         color: var(--color-light-gray);
         font-size: 0.875rem;
     }
-    
+
     .footer-container {
         padding: 3rem 1.5rem;
         display: flex;
@@ -64,7 +81,7 @@ const year = new Date().getFullYear();
         width: 100%;
         height: auto;
     }
-    
+
     .legal-links {
         display: flex;
         flex-wrap: wrap;
@@ -88,5 +105,28 @@ const year = new Date().getFullYear();
     .copyright p {
         margin: 0;
         color: #aaa; /* Color más suave para el copyright */
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .powered-by p {
+        margin: 0;
+        font-size: 0.75rem;
+        color: #888;
+    }
+
+    .powered-by a {
+        color: var(--color-accent);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .powered-by a:hover {
+        text-decoration: underline;
     }
 </style>
