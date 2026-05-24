@@ -1,13 +1,49 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import t from "../../i18n/es.json";
+
+const faqItems = [
+  {
+    question: "¿Ofrecen primera consulta gratuita?",
+    answer: "Sí, ofrecemos una primera consulta gratuita para evaluar tu caso y orientarte sobre las mejores opciones legales disponibles. Puedes contactarnos por teléfono, email o mediante el formulario de nuestra web.",
+  },
+  {
+    question: "¿Atienden a clientes extranjeros en inglés o francés?",
+    answer: "Sí, atendemos en español, inglés y francés. Muchos de nuestros clientes son ciudadanos extranjeros residentes en la Costa del Sol. Además contamos con servicio de traducción para otros idiomas.",
+  },
+  {
+    question: "¿Tramitan la nacionalidad española y el arraigo social?",
+    answer: "Somos especialistas en extranjería. Tramitamos la Nacionalidad Española por residencia, opción y Ley de Memoria Democrática, así como Arraigo Social, Laboral y Familiar, Reagrupación Familiar y Tarjeta Comunitaria.",
+  },
+  {
+    question: "¿Dónde está ubicado el despacho y a qué zonas atienden?",
+    answer: "Nuestro despacho principal está en Calle Antequera 2, piso 2, Fuengirola (Málaga). Atendemos a clientes de toda la Costa del Sol, Málaga y Madrid.",
+  },
+  {
+    question: "¿Ofrecen asistencia jurídica urgente en materia penal?",
+    answer: "Sí, prestamos asistencia al detenido las 24 horas en comisaría y juzgados. También gestionamos defensa en juicios rápidos, delitos leves, alcoholemias y casos de violencia de género.",
+  },
+];
 ---
 
 <Layout
-  title="Áreas de Práctica | Erika Morales Abogada en Fuengirola"
-  description="Especialista en derecho de extranjería, civil, familia, penal y laboral en la Costa del Sol. Ofrezco asesoramiento y representación legal experta."
+  title="Servicios Jurídicos en Fuengirola | Extranjería, Civil y Penal | Erika Morales"
+  description="Especialista en extranjería, nacionalidad española, arraigo, derecho civil, familia y penal en Fuengirola y Costa del Sol. Primera consulta gratuita."
   lang="es"
 >
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map(item => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+})} />
   <div class="page-header">
     <div class="container">
       <h1>{t.servicespage.title}</h1>
@@ -18,23 +54,37 @@ import t from "../../i18n/es.json";
   <section class="section">
     <div class="container services-grid">
       <div class="service-card">
-        <h3>{t.servicespage.civilTitle}</h3>
+        <h2>{t.servicespage.immigrationTitle}</h2>
+        <p set:html={t.servicespage.immigrationText} />
+      </div>
+
+      <div class="service-card">
+        <h2>{t.servicespage.civilTitle}</h2>
         <p set:html={t.servicespage.civilText} />
       </div>
 
       <div class="service-card">
-        <h3>{t.servicespage.familyTitle}</h3>
+        <h2>{t.servicespage.familyTitle}</h2>
         <p set:html={t.servicespage.familyText} />
       </div>
 
       <div class="service-card">
-        <h3>{t.servicespage.penalTitle}</h3>
+        <h2>{t.servicespage.penalTitle}</h2>
         <p set:html={t.servicespage.penalText} />
       </div>
+    </div>
+  </section>
 
-      <div class="service-card">
-        <h3>{t.servicespage.immigrationTitle}</h3>
-        <p set:html={t.servicespage.immigrationText} />
+  <section class="section faq-section">
+    <div class="container">
+      <h2 class="faq-title">Preguntas Frecuentes</h2>
+      <div class="faq-list">
+        {faqItems.map((item) => (
+          <details class="faq-item">
+            <summary class="faq-question">{item.question}</summary>
+            <p class="faq-answer">{item.answer}</p>
+          </details>
+        ))}
       </div>
     </div>
   </section>
@@ -76,8 +126,61 @@ import t from "../../i18n/es.json";
   /* --- CORRECCIÓN PARA MÓVILES --- */
   @media (max-width: 768px) {
     .services-grid {
-      /* Cambiamos la rejilla a una sola columna */
       grid-template-columns: 1fr;
     }
+  }
+
+  /* FAQ */
+  .faq-section {
+    background-color: var(--color-light-gray);
+  }
+  .faq-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+  }
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .faq-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .faq-question {
+    cursor: pointer;
+    padding: 1.25rem 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-dark-blue);
+  }
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+  .faq-question::after {
+    content: "+";
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+  details[open] .faq-question::after {
+    transform: rotate(45deg);
+  }
+  .faq-answer {
+    padding: 0 1.5rem 1.25rem 1.5rem;
+    margin: 0;
+    color: var(--color-text);
+    line-height: 1.7;
   }
 </style>
