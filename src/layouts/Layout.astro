@@ -96,6 +96,13 @@ const alternates = ["es", "en", "fr", "ja"]
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={canonicalURL} />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+        <!-- Geo meta tags (local SEO) -->
+        <meta name="geo.region" content="ES-MA" />
+        <meta name="geo.placename" content="Fuengirola, Málaga, España" />
+        <meta name="geo.position" content="36.5414;-4.6234" />
+        <meta name="ICBM" content="36.5414, -4.6234" />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
@@ -119,12 +126,13 @@ const alternates = ["es", "en", "fr", "ja"]
                 <link rel="alternate" hreflang={alt!.lang} href={alt!.href} />
             ))
         }
-        {
-            /* Fallback x-default to es/ home if we are at home, or generally pointing to es version */
-        }
-        {
-            /* We can skip x-default if we list all regions, but pointing to ES is safe */
-        }
+        {alternates.length > 0 && (
+            <link
+                rel="alternate"
+                hreflang="x-default"
+                href={alternates.find((a) => a!.lang === "es")!.href}
+            />
+        )}
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -137,40 +145,129 @@ const alternates = ["es", "en", "fr", "ja"]
             type="application/ld+json"
             set:html={JSON.stringify({
                 "@context": "https://schema.org",
-                "@type": "Attorney",
-                name: "Erika Morales Abogada",
-                description: es.homepage.heroSubtitle,
-                url: siteBase,
-                logo: `${siteBase}/logo_erika.png`,
-                image: `${siteBase}/fondo.jpg`,
-                telephone: es.contactpage.infoPhone.replace(/\s/g, ""),
-                hasMap: "https://maps.google.com/?cid=TUIDENGOOGLEMAPS",
-                address: {
-                    "@type": "PostalAddress",
-                    streetAddress: "Calle Antequera 2, piso 2",
-                    addressLocality: "Fuengirola",
-                    postalCode: "29649",
-                    addressRegion: "Málaga",
-                    addressCountry: "ES",
-                },
-                geo: {
-                    "@type": "GeoCoordinates",
-                    latitude: "36.5414",
-                    longitude: "-4.6234",
-                },
-                priceRange: "$$",
-                openingHoursSpecification: [
+                "@graph": [
                     {
-                        "@type": "OpeningHoursSpecification",
-                        dayOfWeek: [
-                            "Monday",
-                            "Tuesday",
-                            "Wednesday",
-                            "Thursday",
-                            "Friday",
+                        "@type": ["Attorney", "LegalService"],
+                        "@id": `${siteBase}/#lawfirm`,
+                        name: "Erika Morales Abogada",
+                        description: "Despacho de abogada especialista en extranjería, derecho civil, penal y laboral en Fuengirola (Málaga) y Madrid. Atención en español, inglés y francés.",
+                        url: siteBase,
+                        logo: {
+                            "@type": "ImageObject",
+                            url: `${siteBase}/logo_erika.png`,
+                        },
+                        image: `${siteBase}/fondo.jpg`,
+                        telephone: "+34635041999",
+                        email: "erikamorales@icamalaga.org",
+                        sameAs: [
+                            "https://www.linkedin.com/in/erika-lizeth-morales-andrade/",
                         ],
-                        opens: "09:00",
-                        closes: "18:00",
+                        address: {
+                            "@type": "PostalAddress",
+                            streetAddress: "Calle Antequera 2, piso 2",
+                            addressLocality: "Fuengirola",
+                            postalCode: "29649",
+                            addressRegion: "Málaga",
+                            addressCountry: "ES",
+                        },
+                        geo: {
+                            "@type": "GeoCoordinates",
+                            latitude: "36.5414",
+                            longitude: "-4.6234",
+                        },
+                        areaServed: [
+                            { "@type": "City", name: "Fuengirola" },
+                            { "@type": "City", name: "Málaga" },
+                            { "@type": "AdministrativeArea", name: "Costa del Sol" },
+                            { "@type": "City", name: "Madrid" },
+                            { "@type": "Country", name: "España" },
+                        ],
+                        knowsLanguage: ["es-ES", "en", "fr", "ja"],
+                        priceRange: "$$",
+                        openingHoursSpecification: [
+                            {
+                                "@type": "OpeningHoursSpecification",
+                                dayOfWeek: [
+                                    "Monday",
+                                    "Tuesday",
+                                    "Wednesday",
+                                    "Thursday",
+                                    "Friday",
+                                ],
+                                opens: "09:00",
+                                closes: "18:00",
+                            },
+                        ],
+                        founder: {
+                            "@type": "Person",
+                            "@id": `${siteBase}/#erika-morales`,
+                            name: "Érika Lizeth Morales Andrade",
+                            jobTitle: "Abogada",
+                            alumniOf: [
+                                { "@type": "CollegeOrUniversity", name: "Universidad Complutense de Madrid" },
+                                { "@type": "CollegeOrUniversity", name: "Universidad Francisco de Vitoria" },
+                            ],
+                            memberOf: {
+                                "@type": "Organization",
+                                name: "Ilustre Colegio de Abogados de Málaga",
+                            },
+                            sameAs: "https://www.linkedin.com/in/erika-lizeth-morales-andrade/",
+                        },
+                        hasOfferCatalog: {
+                            "@type": "OfferCatalog",
+                            name: "Servicios Jurídicos",
+                            itemListElement: [
+                                {
+                                    "@type": "Offer",
+                                    itemOffered: {
+                                        "@type": "LegalService",
+                                        name: "Derecho de Extranjería y Nacionalidad Española",
+                                        description: "Especialistas en Nacionalidad Española por residencia, opción y Ley de Memoria Democrática. Arraigo social, laboral y familiar. Reagrupación Familiar, Tarjeta Comunitaria y Visados de Oro.",
+                                    },
+                                },
+                                {
+                                    "@type": "Offer",
+                                    itemOffered: {
+                                        "@type": "LegalService",
+                                        name: "Derecho Civil y Contratos",
+                                        description: "Reclamaciones de cantidad, contratos de alquiler y compraventa, desahucios y responsabilidad civil.",
+                                    },
+                                },
+                                {
+                                    "@type": "Offer",
+                                    itemOffered: {
+                                        "@type": "LegalService",
+                                        name: "Derecho de Familia y Sucesiones",
+                                        description: "Divorcios, medidas de custodia, pensiones de alimentos, herencias y testamentos.",
+                                    },
+                                },
+                                {
+                                    "@type": "Offer",
+                                    itemOffered: {
+                                        "@type": "LegalService",
+                                        name: "Derecho Penal",
+                                        description: "Defensa en juicios rápidos, delitos leves, alcoholemias y violencia de género. Asistencia al detenido 24 horas.",
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": `${siteBase}/#website`,
+                        url: siteBase,
+                        name: "Erika Morales Abogada",
+                        description: "Abogada especialista en extranjería, derecho civil y penal en Fuengirola y Costa del Sol",
+                        inLanguage: ["es-ES", "en-GB", "fr-FR", "ja-JP"],
+                        publisher: { "@id": `${siteBase}/#lawfirm` },
+                        potentialAction: {
+                            "@type": "SearchAction",
+                            target: {
+                                "@type": "EntryPoint",
+                                urlTemplate: `${siteBase}/es/servicios`,
+                            },
+                            "query-input": "required name=search_term_string",
+                        },
                     },
                 ],
             })}
